@@ -225,6 +225,7 @@ button,input,select,textarea{font:inherit;color:inherit}
 .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--ink);background:#fff}
 .form .btn{width:100%;margin-top:4px}
 .form small{font-size:14px;color:var(--muted);line-height:1.5}
+.form a[hidden]{display:none}
 .err{color:#B3261E;font-size:14px;font-weight:600;min-height:0}
 
 /* footer */
@@ -604,6 +605,7 @@ button,input,select,textarea{font:inherit;color:inherit}
         </select></div>
       <div class="field"><label for="fMsg">Anything we should know? <span style="font-weight:400;color:var(--muted)">(optional)</span></label><textarea id="fMsg"></textarea></div>
       <p class="err" id="fErr" role="alert"></p>
+      <a class="btn btn-ink" id="fGo" hidden target="_blank" rel="noopener" href="https://wa.me/917042621771">Open WhatsApp with your details</a>
       <button class="btn btn-wa" type="submit"><svg aria-hidden="true"><use href="#i-wa"/></svg>Send on WhatsApp</button>
       <small>Prefer a call? Ring +91 95996 53306, Monday to Saturday, 10 AM to 7 PM.</small>
     </form>
@@ -823,7 +825,10 @@ button,input,select,textarea{font:inherit;color:inherit}
     err.textContent = '';
     var msg = 'Hello Muds, I would like a free consultation.\nName: ' + name + '\nPhone: ' + phone + '\nService: ' + document.getElementById('fService').value;
     var extra = document.getElementById('fMsg').value.trim(); if(extra) msg += '\nDetails: ' + extra;
-    window.open(waLink(msg), '_blank', 'noopener');
+    var url = waLink(msg), w = null;
+    try { w = window.open(url, '_blank'); } catch(x) {}
+    var go = document.getElementById('fGo'); go.href = url; go.hidden = false;
+    if(!w){ go.focus(); }
   });
 })();
 </script>
