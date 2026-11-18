@@ -5,89 +5,109 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Muds – Company Registration, Compliance and Legal Services in Gurgaon</title>
 <meta name="description" content="Company registration, compliance, tax and legal services by one team of Chartered Accountants, Company Secretaries and Advocates. Serving businesses since 2013.">
+<meta name="theme-color" content="#070B24">
 <link rel="icon" type="image/png" href="muds-logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Mukta:wght@400;500;600;700&display=swap">
 <style>
 :root{
-  --ink:#0E2240;
-  --ink-2:#16325A;
-  --paper:#F4F6FA;
+  --night:#070B24;
+  --night-2:#0E1438;
+  --on-night:#F2F4FF;
+  --on-night-muted:#B4BAD6;
+  --surface:#F6F7FB;
   --white:#FFFFFF;
-  --stamp:#5B3FD0;
-  --marigold:#F29A1F;
-  --text:#0E2240;
-  --muted:#4A5A73;
-  --line:#DCE2EC;
-  --on-ink:#E8EDF5;
-  --on-ink-muted:#A9B7CC;
+  --ink:#0B1033;
+  --muted:#545B7A;
+  --line:#E2E5F0;
+  --red:#E8264A;
+  --saffron:#F7B22D;
+  --sky:#1FA3E0;
+  --violet:#8A6CE0;
+  --green:#3DBB5C;
   --wa:#0F7A3A;
+  --spectrum:linear-gradient(90deg,#E8264A,#F7B22D 25%,#3DBB5C 50%,#1FA3E0 75%,#8A6CE0);
   --display:'Bricolage Grotesque',system-ui,sans-serif;
   --body:'Mukta',system-ui,sans-serif;
-  --wrap:1200px;
+  --wrap:1240px;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;font-family:var(--body);font-size:18px;line-height:1.6;color:var(--text);background:var(--white);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{margin:0;font-family:var(--body);font-size:18px;line-height:1.6;color:var(--ink);background:var(--white);-webkit-font-smoothing:antialiased;overflow-x:hidden}
 img,svg{display:block;max-width:100%}
 a{color:inherit}
-h1,h2,h3{font-family:var(--display);margin:0;line-height:1.05;letter-spacing:-0.02em}
+h1,h2,h3,h4{font-family:var(--display);margin:0;line-height:1.05;letter-spacing:-0.02em}
 p{margin:0}
 button,input,select,textarea{font:inherit;color:inherit}
-:focus-visible{outline:3px solid var(--marigold);outline-offset:3px;border-radius:6px}
+:focus-visible{outline:3px solid var(--saffron);outline-offset:3px;border-radius:8px}
 .wrap{width:100%;max-width:var(--wrap);margin:0 auto;padding:0 32px}
-.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:#fff;padding:10px 16px;border-radius:8px;z-index:200}
+.skip{position:absolute;left:-999px;top:8px;background:var(--night);color:#fff;padding:10px 16px;border-radius:8px;z-index:200}
 .skip:focus{left:8px}
 
-/* buttons */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;border-radius:14px;border:0;font-family:var(--body);font-weight:700;font-size:17px;text-decoration:none;cursor:pointer;transition:transform .15s ease,background .2s ease}
+.btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 28px;border-radius:999px;border:0;font-family:var(--body);font-weight:700;font-size:17px;text-decoration:none;cursor:pointer;transition:transform .2s ease,box-shadow .25s ease,background .2s ease}
 .btn:active{transform:translateY(1px)}
-.btn-primary{background:var(--marigold);color:var(--ink)}
-.btn-primary:hover{background:#FFAE3D}
-.btn-ink{background:var(--ink);color:#fff}
-.btn-ink:hover{background:var(--ink-2)}
-.btn-ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 2px var(--ink)}
-.btn-ghost:hover{background:rgba(14,34,64,.06)}
-.btn-wa{background:var(--wa);color:#fff}
-.btn-wa:hover{background:#0B6630}
 .btn svg{width:20px;height:20px;flex:none}
+.btn-primary{background:var(--saffron);color:var(--ink);box-shadow:0 10px 30px -8px rgba(247,178,45,.6),inset 0 1px 0 rgba(255,255,255,.5)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 16px 36px -8px rgba(247,178,45,.7),inset 0 1px 0 rgba(255,255,255,.5)}
+.btn-glass{background:rgba(255,255,255,.08);color:#fff;box-shadow:inset 0 0 0 1px rgba(255,255,255,.22)}
+.btn-glass:hover{background:rgba(255,255,255,.14)}
+.btn-wa{background:var(--wa);color:#fff;box-shadow:0 10px 30px -10px rgba(15,122,58,.7)}
+.btn-wa:hover{transform:translateY(-2px);background:#0C6B33}
+.btn-ink{background:var(--ink);color:#fff;box-shadow:0 10px 30px -12px rgba(11,16,51,.6)}
+.btn-ink:hover{transform:translateY(-2px);background:#1A2257}
 
 /* nav */
-.nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.88);backdrop-filter:saturate(1.4) blur(12px);-webkit-backdrop-filter:saturate(1.4) blur(12px);border-bottom:1px solid transparent;transition:border-color .2s}
-.nav.scrolled{border-bottom-color:var(--line)}
-.nav-in{display:flex;align-items:center;justify-content:space-between;gap:24px;height:76px}
-.logo{display:flex;align-items:center;gap:12px;text-decoration:none;font-family:var(--display);font-weight:800;font-size:24px;letter-spacing:-0.02em}
-.logo-mark{width:38px;height:38px;flex:none}
-.logo-img{height:60px;width:auto;flex:none}
-.logo-tile{display:flex;background:#fff;border-radius:16px;padding:8px;flex:none}
-.logo-tile img{height:76px;width:auto}
-.logo-txt{font-size:19px;line-height:1.1}
-.logo small{display:block;font-family:var(--body);font-weight:500;font-size:13px;letter-spacing:0;color:var(--muted);line-height:1}
-.nav-links{display:flex;gap:30px;font-weight:600;font-size:16px}
-.nav-links a{text-decoration:none;color:var(--muted);padding:8px 0}
-.nav-links a:hover{color:var(--ink)}
-.nav-cta{display:flex;gap:10px;align-items:center}
-.nav-cta .btn{min-height:46px;font-size:16px;padding:0 20px;border-radius:12px}
-.menu-btn{display:none;width:46px;height:46px;border-radius:12px;border:0;background:var(--paper);cursor:pointer;align-items:center;justify-content:center}
+.nav{position:fixed;left:0;right:0;top:0;z-index:100;padding:14px 0;transition:padding .25s ease}
+.nav-in{display:flex;align-items:center;justify-content:space-between;gap:20px;height:68px;padding:0 10px;border-radius:999px;background:rgba(10,15,44,.55);box-shadow:inset 0 0 0 1px rgba(255,255,255,.1),0 20px 50px -20px rgba(0,0,0,.5);backdrop-filter:saturate(1.6) blur(18px);-webkit-backdrop-filter:saturate(1.6) blur(18px)}
+.nav.scrolled{padding:8px 0}
+.nav.scrolled .nav-in{background:rgba(10,15,44,.85)}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff}
+.logo-pill{display:flex;align-items:center;justify-content:center;background:#fff;border-radius:999px;height:52px;padding:0 14px 0 8px}
+.logo-pill img{height:46px;width:auto}
+.logo-txt{font-family:var(--display);font-weight:700;font-size:17px;line-height:1.1;letter-spacing:-0.01em}
+.logo-txt small{display:block;font-family:var(--body);font-weight:500;font-size:13px;color:var(--on-night-muted);letter-spacing:0}
+.nav-links{display:flex;gap:4px;font-weight:600;font-size:16px}
+.nav-links a{text-decoration:none;color:var(--on-night-muted);padding:10px 16px;border-radius:999px;transition:background .2s,color .2s}
+.nav-links a:hover{color:#fff;background:rgba(255,255,255,.08)}
+.nav-cta{display:flex;gap:8px;align-items:center}
+.nav-cta .btn{min-height:48px;font-size:16px;padding:0 22px}
+.menu-btn{display:none;width:48px;height:48px;border-radius:50%;border:0;background:rgba(255,255,255,.1);color:#fff;cursor:pointer;align-items:center;justify-content:center}
 .menu-btn svg{width:22px;height:22px}
 .mobile-menu{display:none}
 
-/* hero */
-.hero{position:relative;background:var(--paper);overflow:hidden;padding:72px 0 0}
-.hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(14,34,64,.045) 1px,transparent 1px);background-size:100% 34px;mask-image:linear-gradient(180deg,#000 40%,transparent);-webkit-mask-image:linear-gradient(180deg,#000 40%,transparent);pointer-events:none}
-.hero-grid{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
-.hero h1{font-size:clamp(46px,6.4vw,88px);font-weight:800;letter-spacing:-0.035em;line-height:.98;max-width:12ch}
-.hero-sub{margin-top:26px;font-size:20px;line-height:1.6;color:var(--muted);max-width:52ch}
-.hero-actions{margin-top:34px;display:flex;flex-wrap:wrap;gap:14px}
-.hero-note{margin-top:18px;font-size:15px;color:var(--muted)}
+/* aurora */
+.aurora{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:-1}
+.aurora span{position:absolute;border-radius:50%;filter:blur(90px);opacity:.55;animation:drift 22s ease-in-out infinite alternate}
+.aurora .a1{width:520px;height:520px;background:var(--violet);left:-120px;top:-80px}
+.aurora .a2{width:460px;height:460px;background:var(--sky);right:-60px;top:40px;animation-delay:-6s;opacity:.45}
+.aurora .a3{width:380px;height:380px;background:var(--red);right:22%;bottom:-160px;animation-delay:-11s;opacity:.35}
+.aurora .a4{width:340px;height:340px;background:var(--saffron);left:30%;top:30%;animation-delay:-3s;opacity:.18}
+@keyframes drift{0%{transform:translate(0,0) scale(1)}50%{transform:translate(60px,40px) scale(1.12)}100%{transform:translate(-40px,70px) scale(.95)}}
+.grain{position:absolute;inset:0;pointer-events:none;z-index:-1;background-image:radial-gradient(rgba(255,255,255,.08) 1px,transparent 1px);background-size:26px 26px;mask-image:radial-gradient(ellipse at 50% 30%,#000 30%,transparent 75%);-webkit-mask-image:radial-gradient(ellipse at 50% 30%,#000 30%,transparent 75%)}
 
-/* certificate stage */
-.stage{position:relative;padding:20px 0 60px}
-.cert-wrap{position:relative;transform:rotate(-2.2deg);filter:drop-shadow(0 30px 40px rgba(14,34,64,.18)) drop-shadow(0 6px 10px rgba(14,34,64,.08))}
+/* hero */
+.hero{position:relative;background:var(--night);color:var(--on-night);padding:150px 0 0;overflow:hidden;isolation:isolate}
+.hero-grid{position:relative;display:grid;grid-template-columns:1.02fr .98fr;gap:40px;align-items:center}
+.badge{display:inline-flex;align-items:center;gap:10px;padding:6px 16px 6px 6px;border-radius:999px;background:rgba(255,255,255,.07);box-shadow:inset 0 0 0 1px rgba(255,255,255,.14);font-size:15px;font-weight:600;color:var(--on-night)}
+.badge b{display:inline-flex;align-items:center;gap:4px;background:#fff;color:var(--ink);border-radius:999px;padding:2px 10px;font-weight:700}
+.badge b svg{width:14px;height:14px;color:#E89A0C}
+.hero h1{margin-top:26px;font-size:clamp(46px,6.2vw,92px);font-weight:800;letter-spacing:-0.04em;line-height:.96;color:#fff;max-width:11ch}
+.hero-sub{margin-top:26px;font-size:20px;line-height:1.6;color:var(--on-night-muted);max-width:50ch}
+.hero-actions{margin-top:36px;display:flex;flex-wrap:wrap;gap:14px}
+.hero-note{margin-top:20px;font-size:15px;color:var(--on-night-muted)}
+.hero-note a{color:#fff;white-space:nowrap}
+
+.stage{position:relative;padding:70px 0 30px}
+.arc{position:absolute;left:50%;top:-30px;width:112%;max-width:700px;transform:translateX(-50%);pointer-events:none;z-index:0}
+.arc path{fill:none;stroke-width:16;stroke-linecap:round;stroke-dasharray:100;stroke-dashoffset:100;animation:draw 1.1s cubic-bezier(.6,0,.2,1) forwards}
+.arc path:nth-child(2){animation-delay:.12s}.arc path:nth-child(3){animation-delay:.24s}.arc path:nth-child(4){animation-delay:.36s}.arc path:nth-child(5){animation-delay:.48s}
+@keyframes draw{to{stroke-dashoffset:0}}
+.arc-glow{position:absolute;left:50%;top:32%;width:70%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;background:radial-gradient(circle,rgba(138,108,224,.45),transparent 65%);filter:blur(30px);z-index:0}
+.cert-wrap{position:relative;z-index:1;width:88%;margin:0 auto;transform:rotate(-2.5deg);filter:drop-shadow(0 40px 60px rgba(0,0,0,.45)) drop-shadow(0 8px 16px rgba(0,0,0,.25))}
 .cert{width:100%;height:auto}
 .cert .name{font-family:var(--display);font-weight:800;font-size:30px;letter-spacing:-0.02em;fill:var(--ink)}
-.cert .lbl{font-family:var(--body);font-size:13px;fill:#6B7A90}
+.cert .lbl{font-family:var(--body);font-size:13px;fill:#6B7290}
 .cert .val{font-family:var(--body);font-weight:600;font-size:17px;fill:var(--ink)}
 .cert .ttl{font-family:var(--display);font-weight:700;font-size:15px;letter-spacing:.32em;fill:var(--ink)}
 .cert .big{font-family:var(--display);font-weight:800;font-size:36px;letter-spacing:-0.02em;fill:var(--ink)}
@@ -95,227 +115,242 @@ button,input,select,textarea{font:inherit;color:inherit}
 @keyframes blink{50%{opacity:0}}
 .stamp{transform-box:fill-box;transform-origin:center;opacity:0}
 .stamp.hit{animation:stamp .62s cubic-bezier(.2,.9,.25,1.25) forwards}
-@keyframes stamp{0%{opacity:0;transform:scale(1.9) rotate(-28deg)}55%{opacity:.95;transform:scale(.94) rotate(-14deg)}75%{transform:scale(1.03) rotate(-15deg)}100%{opacity:.9;transform:scale(1) rotate(-15deg)}}
+@keyframes stamp{0%{opacity:0;transform:scale(1.9) rotate(-28deg)}55%{opacity:.95;transform:scale(.94) rotate(-14deg)}75%{transform:scale(1.03) rotate(-15deg)}100%{opacity:.92;transform:scale(1) rotate(-15deg)}}
 .cert-wrap.shake{animation:shake .32s ease .28s}
-@keyframes shake{0%,100%{transform:rotate(-2.2deg) translate(0,0)}30%{transform:rotate(-2.2deg) translate(0,4px)}60%{transform:rotate(-2.2deg) translate(0,-1px)}}
-.try{position:relative;margin:34px auto 0;max-width:470px;background:var(--white);border-radius:18px;padding:16px;box-shadow:0 1px 0 var(--line),0 14px 30px rgba(14,34,64,.08)}
-.try label{display:block;font-weight:700;font-size:15px;margin:0 4px 8px}
-.try-row{display:flex;gap:8px}
-.try input{flex:1;min-width:0;height:48px;border-radius:12px;border:2px solid var(--line);padding:0 14px;font-size:17px;background:var(--paper)}
-.try input:focus{border-color:var(--ink);outline:none;background:#fff}
+@keyframes shake{0%,100%{transform:rotate(-2.5deg) translate(0,0)}30%{transform:rotate(-2.5deg) translate(0,5px)}60%{transform:rotate(-2.5deg) translate(0,-1px)}}
+
+.try{position:relative;z-index:2;margin:30px auto 0;max-width:480px;border-radius:24px;padding:18px;background:rgba(255,255,255,.08);box-shadow:inset 0 0 0 1px rgba(255,255,255,.16),0 30px 60px -30px rgba(0,0,0,.6);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
+.try label{display:block;font-weight:700;font-size:15px;margin:0 4px 10px;color:#fff}
+.try input{width:100%;height:52px;border-radius:14px;border:1px solid rgba(255,255,255,.2);padding:0 16px;font-size:17px;background:rgba(7,11,36,.5);color:#fff}
+.try input::placeholder{color:#8F96B8}
+.try input:focus{outline:none;border-color:var(--saffron);background:rgba(7,11,36,.75)}
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
-.chip{min-height:40px;padding:0 14px;border-radius:999px;border:2px solid var(--line);background:#fff;font-weight:600;font-size:15px;cursor:pointer}
-.chip[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:#fff}
+.chip{min-height:42px;padding:0 16px;border-radius:999px;border:1px solid rgba(255,255,255,.22);background:transparent;color:#fff;font-weight:600;font-size:15px;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+.chip:hover{background:rgba(255,255,255,.08)}
+.chip[aria-pressed="true"]{background:#fff;border-color:#fff;color:var(--ink)}
 
-/* proof strip */
-.proof{position:relative;background:var(--ink);color:var(--on-ink)}
-.proof-in{display:grid;grid-template-columns:repeat(5,1fr);gap:0}
-.proof-item{padding:30px 24px;border-left:1px solid rgba(255,255,255,.1)}
-.proof-item:first-child{border-left:0;padding-left:0}
-.proof-num{font-family:var(--display);font-weight:800;font-size:40px;letter-spacing:-0.02em;color:#fff;line-height:1;display:flex;align-items:center;gap:8px}
-.proof-num svg{width:22px;height:22px}
-.proof-lbl{margin-top:8px;font-size:15px;color:var(--on-ink-muted)}
+.proof{position:relative;z-index:2;margin-top:70px;padding-bottom:80px}
+.proof-in{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.proof-item{padding:24px 22px;border-radius:22px;background:rgba(255,255,255,.05);box-shadow:inset 0 0 0 1px rgba(255,255,255,.1)}
+.proof-num{font-family:var(--display);font-weight:800;font-size:40px;letter-spacing:-0.03em;color:#fff;line-height:1;display:flex;align-items:center;gap:8px}
+.proof-num svg{width:24px;height:24px}
+.proof-lbl{margin-top:10px;font-size:15px;color:var(--on-night-muted);line-height:1.4}
+.proof-item .bar{height:3px;border-radius:3px;margin-top:16px;width:40px}
 
-/* section basics */
-.sec{padding:120px 0}
-.sec-head{max-width:760px;margin-bottom:56px}
-.sec-head h2{font-size:clamp(36px,4.6vw,60px);font-weight:800;letter-spacing:-0.03em}
-.sec-head p{margin-top:18px;font-size:20px;color:var(--muted);max-width:56ch}
+/* sections */
+.sec{position:relative;padding:130px 0}
+.sec-head{max-width:780px;margin-bottom:60px}
+.sec-head.center{margin-left:auto;margin-right:auto;text-align:center}
+.sec-head.center p{margin-left:auto;margin-right:auto}
+.sec-head h2{font-size:clamp(38px,4.8vw,64px);font-weight:800;letter-spacing:-0.035em}
+.sec-head p{margin-top:20px;font-size:20px;color:var(--muted);max-width:56ch}
+.surface{background:var(--surface)}
+.dark{background:var(--night);color:var(--on-night);overflow:hidden;isolation:isolate}
+.dark .sec-head h2{color:#fff}
+.dark .sec-head p{color:var(--on-night-muted)}
 
-/* services picker */
-.picker{display:grid;grid-template-columns:320px 1fr;gap:32px;align-items:start}
-.tabs{display:flex;flex-direction:column;gap:6px;position:sticky;top:100px}
-.tab{display:flex;align-items:center;gap:14px;width:100%;text-align:left;min-height:64px;padding:12px 16px;border-radius:16px;border:0;background:transparent;cursor:pointer;font-family:var(--display);font-weight:700;font-size:21px;letter-spacing:-0.01em;color:var(--muted);transition:background .2s,color .2s}
-.tab:hover{background:var(--paper);color:var(--ink)}
+/* services */
+.seg{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;padding:8px;border-radius:999px;background:#fff;box-shadow:0 1px 0 var(--line),0 20px 50px -30px rgba(11,16,51,.35);width:max-content;max-width:100%;margin:0 auto 36px}
+.tab{display:flex;align-items:center;gap:10px;min-height:52px;padding:0 20px 0 8px;border-radius:999px;border:0;background:transparent;cursor:pointer;font-family:var(--body);font-weight:700;font-size:16px;color:var(--muted);transition:background .25s,color .25s}
+.tab:hover{color:var(--ink);background:var(--surface)}
+.tab .ico{width:38px;height:38px;flex:none;border-radius:50%;display:flex;align-items:center;justify-content:center;background:color-mix(in srgb,var(--c) 14%,#fff);color:var(--c)}
+.tab .ico svg{width:20px;height:20px}
 .tab[aria-selected="true"]{background:var(--ink);color:#fff}
-.tab .ico{width:38px;height:38px;flex:none;border-radius:11px;display:flex;align-items:center;justify-content:center;background:rgba(14,34,64,.07)}
-.tab[aria-selected="true"] .ico{background:rgba(255,255,255,.12)}
-.tab .ico svg{width:22px;height:22px}
-.tab .count{margin-left:auto;font-family:var(--body);font-size:14px;font-weight:600;opacity:.7}
-.panel{background:var(--paper);border-radius:28px;padding:40px;min-height:520px;position:relative;overflow:hidden}
-.panel-top{display:flex;justify-content:space-between;gap:24px;align-items:flex-start;margin-bottom:28px}
-.panel h3{font-size:36px;font-weight:800;letter-spacing:-0.025em}
-.panel-top p{margin-top:10px;color:var(--muted);max-width:44ch}
-.panel-art{width:120px;height:120px;flex:none;color:var(--stamp)}
-.svc-list{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.svc{display:flex;flex-direction:column;gap:6px;background:#fff;border-radius:18px;padding:22px 22px 18px;text-decoration:none;border:1px solid var(--line);transition:border-color .2s,transform .2s}
-.svc:hover{border-color:var(--ink);transform:translateY(-2px)}
+.tab[aria-selected="true"] .ico{background:var(--c);color:#fff}
+.panel{position:relative;border-radius:32px;background:#fff;padding:48px;box-shadow:0 1px 0 var(--line),0 40px 80px -50px rgba(11,16,51,.45);overflow:hidden}
+.panel::before{content:"";position:absolute;inset:0 0 auto 0;height:5px;background:var(--c)}
+.panel-glow{position:absolute;right:-120px;top:-120px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,color-mix(in srgb,var(--c) 28%,transparent),transparent 70%);pointer-events:none}
+.panel-body{position:relative;display:grid;grid-template-columns:.8fr 1.2fr;gap:48px;animation:panelIn .4s ease}
+@keyframes panelIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.panel-art{width:88px;height:88px;border-radius:26px;display:flex;align-items:center;justify-content:center;background:var(--c);color:#fff;box-shadow:0 20px 40px -16px var(--c)}
+.panel-art svg{width:44px;height:44px}
+.panel h3{margin-top:28px;font-size:40px;font-weight:800;letter-spacing:-0.03em}
+.panel-intro p{margin-top:14px;color:var(--muted);max-width:40ch}
+.panel-intro .btn{margin-top:28px}
+.svc-list{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-content:start}
+.svc{display:flex;flex-direction:column;gap:6px;border-radius:20px;padding:22px;text-decoration:none;background:var(--surface);transition:background .25s,transform .25s,box-shadow .25s}
+.svc:hover{background:#fff;transform:translateY(-3px);box-shadow:0 0 0 1.5px var(--c),0 20px 40px -24px var(--c)}
 .svc strong{font-family:var(--display);font-size:20px;font-weight:700;letter-spacing:-0.01em}
 .svc span{font-size:16px;color:var(--muted);line-height:1.5}
-.svc em{margin-top:auto;padding-top:10px;font-style:normal;font-weight:700;font-size:15px;color:var(--stamp)}
-.panel-body{animation:panelIn .35s ease}
-@keyframes panelIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.svc em{margin-top:auto;padding-top:10px;font-style:normal;font-weight:700;font-size:15px;color:color-mix(in srgb,var(--c) 70%,#0B1033)}
 
 /* process */
-.process{background:var(--ink);color:var(--on-ink);position:relative;overflow:hidden}
-.process .sec-head h2{color:#fff}
-.process .sec-head p{color:var(--on-ink-muted)}
 .track{position:relative}
-.track-line{position:absolute;left:0;right:0;top:27px;height:3px;background:rgba(255,255,255,.12);border-radius:3px}
-.track-fill{position:absolute;left:0;top:0;bottom:0;width:0;background:var(--marigold);border-radius:3px;transition:width .1s linear}
-.steps{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:28px;list-style:none;margin:0;padding:0}
-.step-dot{width:56px;height:56px;border-radius:50%;background:var(--ink);box-shadow:inset 0 0 0 3px rgba(255,255,255,.18);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:800;font-size:22px;color:#fff;transition:background .3s,box-shadow .3s,color .3s}
-.step.on .step-dot{background:var(--marigold);box-shadow:none;color:var(--ink)}
-.step h3{margin-top:26px;font-size:25px;font-weight:700;color:#fff;letter-spacing:-0.015em;line-height:1.15}
-.step p{margin-top:12px;font-size:17px;color:var(--on-ink-muted)}
-.mini{margin-top:22px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:14px;display:flex;flex-direction:column;gap:8px}
-.mini-row{display:flex;justify-content:space-between;gap:10px;font-size:14px;padding:8px 10px;border-radius:10px;background:rgba(255,255,255,.05)}
-.mini-row b{color:#fff;font-weight:600}
-.mini-row span{color:var(--on-ink-muted)}
-.process-cta{margin-top:56px;display:flex;flex-wrap:wrap;gap:14px;align-items:center}
-.process-cta p{color:var(--on-ink-muted);font-size:17px}
+.track-line{position:absolute;left:28px;right:28px;top:26px;height:4px;background:rgba(255,255,255,.1);border-radius:4px}
+.track-fill{position:absolute;left:0;top:0;bottom:0;width:0;background:linear-gradient(90deg,#E8264A,#F7B22D 33%,#1FA3E0 66%,#3DBB5C);border-radius:4px;box-shadow:0 0 18px rgba(138,108,224,.6)}
+.steps{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:22px;list-style:none;margin:0;padding:0}
+.step{display:flex;flex-direction:column}
+.step-dot{width:56px;height:56px;border-radius:50%;background:var(--night-2);box-shadow:inset 0 0 0 2px rgba(255,255,255,.18);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:800;font-size:22px;color:#fff;transition:background .35s,box-shadow .35s}
+.step.on .step-dot{background:var(--sc);box-shadow:0 0 0 6px color-mix(in srgb,var(--sc) 25%,transparent),0 10px 30px -6px var(--sc)}
+.step-card{flex:1;margin-top:26px;padding:26px;border-radius:24px;background:rgba(255,255,255,.04);box-shadow:inset 0 0 0 1px rgba(255,255,255,.09);display:flex;flex-direction:column}
+.step h3{font-size:24px;font-weight:700;color:#fff;letter-spacing:-0.015em;line-height:1.15}
+.step p{margin-top:12px;font-size:17px;color:var(--on-night-muted)}
+.mini{margin-top:auto;padding-top:20px;display:flex;flex-direction:column;gap:8px}
+.mini-row{display:flex;justify-content:space-between;gap:10px;font-size:14px;padding:10px 12px;border-radius:12px;background:rgba(255,255,255,.06)}
+.mini-row b{color:#fff;font-weight:600;display:flex;align-items:center;gap:6px}
+.mini-row b i{width:8px;height:8px;border-radius:50%;background:var(--sc)}
+.mini-row span{color:var(--on-night-muted)}
+.process-cta{margin-top:60px;display:flex;flex-wrap:wrap;gap:16px;align-items:center}
+.process-cta p{color:var(--on-night-muted);font-size:17px}
 
 /* compare */
 .compare{display:grid;grid-template-columns:.85fr 1.15fr;gap:24px;align-items:stretch}
-.col{border-radius:28px;padding:40px}
+.col{position:relative;border-radius:32px;padding:44px}
 .col h3{font-size:26px;font-weight:700;letter-spacing:-0.015em}
-.col ul{list-style:none;margin:24px 0 0;padding:0}
+.col ul{list-style:none;margin:26px 0 0;padding:0}
 .col li{display:flex;gap:14px;align-items:flex-start;padding:16px 0;border-top:1px solid var(--line);font-size:17px}
-.col li svg{width:22px;height:22px;flex:none;margin-top:3px}
-.col-them{background:var(--paper);color:var(--muted)}
-.col-them h3{color:var(--muted)}
-.col-us{background:var(--white);box-shadow:inset 0 0 0 2px var(--ink)}
-.col-us li svg{color:var(--wa)}
+.col li .mk{width:28px;height:28px;flex:none;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.col li .mk svg{width:15px;height:15px}
+.col-them{background:var(--surface);color:var(--muted)}
+.col-them .mk{background:#E6E8F1;color:#7A809C}
+.col-us{background:#fff;box-shadow:0 40px 80px -50px rgba(11,16,51,.5)}
+.col-us::before{content:"";position:absolute;inset:0;border-radius:inherit;padding:2px;background:var(--spectrum);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none}
+.col-us .mk{background:#DDF3E2;color:#1E7A36}
+.col-us h3{display:flex;align-items:center;gap:12px}
+.col-us h3 img{height:42px;width:auto}
 
 /* desks */
-.desks{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:2px solid var(--ink)}
-.desk{padding:30px 28px 32px 0;border-bottom:1px solid var(--line)}
-.desk:not(:nth-child(3n+1)){padding-left:28px;border-left:1px solid var(--line)}
-.desk h3{font-size:23px;font-weight:700;letter-spacing:-0.015em;display:flex;align-items:center;gap:12px}
-.desk h3 svg{width:26px;height:26px;color:var(--stamp);flex:none}
-.desk p{margin-top:10px;color:var(--muted);font-size:17px}
+.bento{display:grid;grid-template-columns:repeat(6,1fr);gap:16px}
+.desk{position:relative;grid-column:span 2;border-radius:28px;padding:30px;background:#fff;box-shadow:0 1px 0 var(--line),0 30px 60px -45px rgba(11,16,51,.5);overflow:hidden;transition:transform .25s,box-shadow .25s}
+.desk:hover{transform:translateY(-4px);box-shadow:0 0 0 1.5px var(--c),0 30px 60px -35px var(--c)}
+.desk.wide{grid-column:span 3}
+.desk.full{grid-column:1/-1}
+.desk .ico{position:relative;z-index:1;width:56px;height:56px;border-radius:18px;display:flex;align-items:center;justify-content:center;background:var(--c);color:#fff;box-shadow:0 14px 30px -12px var(--c)}
+.desk .ico svg{width:28px;height:28px}
+.desk h3{position:relative;z-index:1;margin-top:22px;font-size:24px;font-weight:700;letter-spacing:-0.015em}
+.desk p{position:relative;z-index:1;margin-top:10px;color:var(--muted);font-size:17px;max-width:46ch}
+.desk::after{content:"";position:absolute;right:-60px;bottom:-60px;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,color-mix(in srgb,var(--c) 22%,transparent),transparent 70%)}
 
 /* learn */
-.learn{background:var(--paper)}
-.learn-card{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
-.learn-card h2{font-size:clamp(34px,4.2vw,54px);font-weight:800;letter-spacing:-0.03em}
-.learn-card p{margin-top:16px;font-size:19px;color:var(--muted);max-width:48ch}
-.learn-card .btn{margin-top:28px}
-.player{position:relative;display:block;aspect-ratio:16/10;border-radius:26px;background:var(--ink);overflow:hidden;text-decoration:none;color:#fff}
+.learn-card{position:relative;display:grid;grid-template-columns:1fr 1.05fr;gap:60px;align-items:center}
+.learn-card h2{font-size:clamp(36px,4.4vw,58px);font-weight:800;letter-spacing:-0.035em;color:#fff}
+.learn-card p{margin-top:18px;font-size:19px;color:var(--on-night-muted);max-width:46ch}
+.learn-card .btn{margin-top:30px}
+.player{position:relative;display:block;aspect-ratio:16/10;border-radius:30px;overflow:hidden;text-decoration:none;color:#fff;box-shadow:inset 0 0 0 1px rgba(255,255,255,.14),0 50px 100px -40px rgba(0,0,0,.8)}
 .player svg.bg{position:absolute;inset:0;width:100%;height:100%}
-.player .play{position:absolute;left:50%;top:50%;width:92px;height:92px;margin:-46px 0 0 -46px;border-radius:50%;background:var(--marigold);display:flex;align-items:center;justify-content:center;transition:transform .25s}
+.player .play{position:absolute;left:50%;top:46%;width:96px;height:96px;margin:-48px 0 0 -48px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;transition:transform .3s;box-shadow:0 0 0 14px rgba(255,255,255,.12),0 0 0 28px rgba(255,255,255,.06)}
 .player:hover .play{transform:scale(1.08)}
-.player .play svg{width:34px;height:34px;color:var(--ink);margin-left:5px}
-.player .cap{position:absolute;left:26px;bottom:22px;right:26px;font-family:var(--display);font-weight:700;font-size:22px;letter-spacing:-0.01em}
-.player .cap small{display:block;font-family:var(--body);font-weight:500;font-size:15px;color:var(--on-ink-muted);letter-spacing:0}
+.player .play svg{width:34px;height:34px;color:var(--red);margin-left:5px}
+.player .cap{position:absolute;left:28px;bottom:24px;right:28px;font-family:var(--display);font-weight:700;font-size:23px;letter-spacing:-0.01em}
+.player .cap small{display:block;font-family:var(--body);font-weight:500;font-size:15px;color:var(--on-night-muted);letter-spacing:0}
 
 /* faq */
-.faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px}
-.faq details{border-top:1px solid var(--line)}
-.faq details:last-child{border-bottom:1px solid var(--line)}
-.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:24px 0;font-family:var(--display);font-weight:700;font-size:22px;letter-spacing:-0.01em}
+.faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:64px;align-items:start}
+.faq-list{display:flex;flex-direction:column;gap:12px}
+.faq details{border-radius:22px;background:#fff;box-shadow:0 1px 0 var(--line),0 20px 40px -36px rgba(11,16,51,.5);transition:box-shadow .25s}
+.faq details[open]{box-shadow:0 0 0 1.5px var(--ink),0 30px 60px -40px rgba(11,16,51,.6)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:24px 26px;font-family:var(--display);font-weight:700;font-size:21px;letter-spacing:-0.01em}
 .faq summary::-webkit-details-marker{display:none}
-.faq summary .pm{width:36px;height:36px;flex:none;border-radius:50%;background:var(--paper);display:flex;align-items:center;justify-content:center;transition:transform .25s,background .2s}
+.faq summary .pm{width:38px;height:38px;flex:none;border-radius:50%;background:var(--surface);display:flex;align-items:center;justify-content:center;transition:transform .3s,background .25s,color .25s}
 .faq summary .pm svg{width:18px;height:18px}
-.faq details[open] summary .pm{transform:rotate(45deg);background:var(--marigold)}
-.faq .ans{padding:0 56px 26px 0;color:var(--muted);font-size:18px}
+.faq details[open] summary .pm{transform:rotate(45deg);background:var(--ink);color:#fff}
+.faq .ans{padding:0 26px 26px;color:var(--muted);font-size:18px;max-width:62ch}
 
 /* contact */
-.contact{background:var(--ink);color:var(--on-ink);position:relative;overflow:hidden}
-.contact-grid{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
-.contact h2{font-size:clamp(40px,5vw,68px);font-weight:800;letter-spacing:-0.035em;color:#fff;max-width:11ch}
-.contact .lead{margin-top:20px;font-size:20px;color:var(--on-ink-muted);max-width:44ch}
+.contact-grid{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.contact h2{font-size:clamp(42px,5.2vw,72px);font-weight:800;letter-spacing:-0.04em;color:#fff;max-width:11ch}
+.contact .lead{margin-top:22px;font-size:20px;color:var(--on-night-muted);max-width:44ch}
 .channels{margin-top:40px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.channel{display:flex;flex-direction:column;gap:2px;padding:18px 20px;border-radius:18px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);text-decoration:none;transition:background .2s}
+.channel{display:flex;align-items:center;gap:14px;padding:16px 18px;border-radius:20px;background:rgba(255,255,255,.05);box-shadow:inset 0 0 0 1px rgba(255,255,255,.1);text-decoration:none;transition:background .2s}
 .channel:hover{background:rgba(255,255,255,.1)}
-.channel span{font-size:14px;color:var(--on-ink-muted)}
-.channel b{font-size:18px;color:#fff;font-weight:600;word-break:break-word}
-.form{background:#fff;color:var(--text);border-radius:28px;padding:36px;display:flex;flex-direction:column;gap:16px}
-.form h3{font-size:30px;font-weight:800;letter-spacing:-0.025em}
+.channel .ci{width:44px;height:44px;border-radius:14px;flex:none;display:flex;align-items:center;justify-content:center;background:var(--c);color:#fff}
+.channel .ci svg{width:20px;height:20px}
+.channel .ct span{display:block;font-size:14px;color:var(--on-night-muted);line-height:1.3}
+.channel .ct b{display:block;font-size:17px;color:#fff;font-weight:600;word-break:break-word;line-height:1.35}
+.form{position:relative;background:#fff;color:var(--ink);border-radius:32px;padding:40px;display:flex;flex-direction:column;gap:16px;box-shadow:0 60px 120px -50px rgba(0,0,0,.8);overflow:hidden}
+.form::before{content:"";position:absolute;left:0;right:0;top:0;height:6px;background:var(--spectrum)}
+.form h3{font-size:32px;font-weight:800;letter-spacing:-0.03em}
 .form p.hint{font-size:15px;color:var(--muted);margin-top:-6px}
 .field{display:flex;flex-direction:column;gap:6px}
 .field label{font-weight:700;font-size:15px}
-.field input,.field select,.field textarea{min-height:52px;border-radius:12px;border:2px solid var(--line);padding:12px 14px;font-size:17px;background:var(--paper);width:100%}
+.field input,.field select,.field textarea{min-height:54px;border-radius:14px;border:1.5px solid var(--line);padding:12px 16px;font-size:17px;background:var(--surface);width:100%}
 .field textarea{resize:vertical;min-height:96px}
-.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--ink);background:#fff}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--violet);background:#fff;box-shadow:0 0 0 4px rgba(138,108,224,.18)}
 .form .btn{width:100%;margin-top:4px}
-.form small{font-size:14px;color:var(--muted);line-height:1.5}
 .form a[hidden]{display:none}
-.err{color:#B3261E;font-size:14px;font-weight:600;min-height:0}
+.form small{font-size:14px;color:var(--muted);line-height:1.5}
+.err{color:#B3261E;font-size:14px;font-weight:600}
 
 /* footer */
-.foot{background:#08172C;color:#B9C6D8;padding:72px 0 36px;font-size:16px}
+.foot{position:relative;background:#050820;color:#AEB5D3;padding:80px 0 36px;font-size:16px}
+.foot::before{content:"";position:absolute;left:0;right:0;top:0;height:3px;background:var(--spectrum)}
 .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px}
-.foot .logo{color:#fff}
-.foot .logo small{color:#8DA2BB}
-.foot address{font-style:normal;margin-top:18px;line-height:1.7}
-.foot h4{margin:0 0 12px;font-family:var(--display);font-size:17px;font-weight:700;color:#fff}
-.foot ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px}
+.foot address{font-style:normal;margin-top:22px;line-height:1.75}
+.foot h4{margin:0 0 14px;font-size:17px;font-weight:700;color:#fff}
+.foot ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
 .foot a{text-decoration:none}
 .foot a:hover{color:#fff}
-.socials{display:flex;gap:10px;margin-top:22px}
-.socials a{width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;color:#fff;transition:background .2s}
-.socials a:hover{background:var(--marigold);color:var(--ink)}
+.socials{display:flex;gap:10px;margin-top:24px}
+.socials a{width:46px;height:46px;border-radius:50%;background:rgba(255,255,255,.07);display:flex;align-items:center;justify-content:center;color:#fff;transition:background .2s,transform .2s}
+.socials a:hover{background:var(--c);transform:translateY(-2px)}
 .socials svg{width:18px;height:18px}
-.foot-bottom{margin-top:56px;padding-top:24px;border-top:1px solid rgba(255,255,255,.08);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:14px;color:#8DA2BB}
+.foot-bottom{margin-top:60px;padding-top:24px;border-top:1px solid rgba(255,255,255,.08);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:14px;color:#8189AE}
 
-/* floating whatsapp */
-.fab{position:fixed;right:20px;bottom:20px;z-index:90;display:flex;align-items:center;gap:10px;background:var(--wa);color:#fff;text-decoration:none;font-weight:700;font-size:16px;min-height:56px;padding:0 22px 0 18px;border-radius:999px;box-shadow:0 10px 28px rgba(15,122,58,.35);transition:transform .2s}
+.fab{position:fixed;right:20px;bottom:20px;z-index:90;display:flex;align-items:center;gap:10px;background:var(--wa);color:#fff;text-decoration:none;font-weight:700;font-size:16px;min-height:58px;padding:0 24px 0 18px;border-radius:999px;box-shadow:0 14px 34px -8px rgba(15,122,58,.6);transition:transform .2s}
 .fab:hover{transform:translateY(-2px)}
 .fab svg{width:24px;height:24px}
 
-/* reveal for counters only */
+@media (max-width:1100px){
+  .nav-links{display:none}
+  .menu-btn{display:flex}
+  .mobile-menu.open{display:flex;flex-direction:column;gap:2px;margin-top:10px;padding:10px;border-radius:24px;background:rgba(10,15,44,.96);box-shadow:inset 0 0 0 1px rgba(255,255,255,.1)}
+  .mobile-menu a{padding:14px 16px;font-weight:600;text-decoration:none;font-size:18px;color:#fff;border-radius:14px}
+  .mobile-menu a:hover{background:rgba(255,255,255,.08)}
+}
 @media (max-width:1024px){
-  .hero-grid{grid-template-columns:1fr;gap:20px}
-  .hero h1{max-width:14ch}
+  .hero-grid{grid-template-columns:1fr;gap:10px}
   .stage{max-width:620px;margin:0 auto;width:100%}
-  .picker{grid-template-columns:1fr}
-  .tabs{position:static;flex-direction:row;overflow-x:auto;gap:8px;padding-bottom:6px;scrollbar-width:none}
-  .tabs::-webkit-scrollbar{display:none}
-  .tab{flex:none;width:auto;min-height:52px;font-size:17px;padding:8px 16px 8px 8px}
-  .tab .count{display:none}
-  .steps{grid-template-columns:1fr 1fr;row-gap:48px}
+  .proof-in{grid-template-columns:repeat(3,1fr)}
+  .seg{border-radius:28px}
+  .panel-body{grid-template-columns:1fr;gap:32px}
+  .steps{grid-template-columns:1fr 1fr;row-gap:36px}
   .track-line{display:none}
   .compare,.learn-card,.faq-grid,.contact-grid{grid-template-columns:1fr}
-  .desks{grid-template-columns:1fr 1fr}
-  .desk:not(:nth-child(3n+1)){padding-left:0;border-left:0}
-  .desk:nth-child(2n){padding-left:24px;border-left:1px solid var(--line)}
+  .bento{grid-template-columns:1fr 1fr}
+  .desk,.desk.wide{grid-column:span 1}
   .foot-grid{grid-template-columns:1fr 1fr}
-  .proof-in{grid-template-columns:repeat(3,1fr)}
-  .proof-item:nth-child(4){border-left:0;padding-left:0}
-}
-@media (max-width:860px){
-  .nav-links,.nav-cta .btn-ghost{display:none}
-  .menu-btn{display:flex}
-  .mobile-menu.open{display:flex;flex-direction:column;gap:4px;padding:8px 20px 20px;border-bottom:1px solid var(--line);background:#fff}
-  .mobile-menu a{padding:12px 4px;font-weight:600;text-decoration:none;font-size:18px;border-bottom:1px solid var(--line)}
 }
 @media (max-width:640px){
   body{font-size:17px}
-  .wrap{padding:0 20px}
-  .sec{padding:80px 0}
-  .sec-head{margin-bottom:36px}
-  .sec-head p{font-size:18px}
-  .hero{padding-top:44px}
+  .wrap{padding:0 16px}
+  .nav{padding:10px 0}
+  .nav-in{height:62px;padding:0 6px}
+  .logo-pill{height:50px;padding:0 10px 0 6px}
+  .logo-pill img{height:44px}
+  .logo-txt{display:none}
+  .nav-cta .btn{display:none}
+  .hero{padding-top:112px}
+  .badge{font-size:14px}
   .hero-sub{font-size:18px}
   .hero-actions .btn{flex:1 1 100%}
-  .nav-cta .btn-primary{display:none}
-  .nav .logo-txt{display:none}
-  .logo-img{height:54px}
-  .cert .name{font-size:28px}
-  .proof-in{grid-template-columns:1fr 1fr}
-  .proof-item{padding:22px 16px;border-left:0;border-top:1px solid rgba(255,255,255,.1)}
-  .proof-item:nth-child(odd){padding-left:0}
-  .proof-item:nth-child(even){border-left:1px solid rgba(255,255,255,.1)}
-  .proof-item:nth-child(-n+2){border-top:0}
-  .proof-item:nth-child(4){padding-left:16px;border-left:1px solid rgba(255,255,255,.1)}
-  .proof-item:last-child{grid-column:1/-1;border-left:0;padding-left:0}
+  .arc{width:118%;top:-14px}
+  .cert-wrap{width:96%}
+  .proof{margin-top:50px;padding-bottom:64px}
+  .proof-in{grid-template-columns:1fr 1fr;gap:10px}
+  .proof-item{padding:18px 16px;border-radius:18px}
+  .proof-item:last-child{grid-column:1/-1}
   .proof-num{font-size:32px}
-  .panel{padding:24px;border-radius:22px;min-height:0}
-  .panel-art{display:none}
-  .panel h3{font-size:30px}
+  .sec{padding:84px 0}
+  .sec-head{margin-bottom:38px}
+  .sec-head p{font-size:18px}
+  .seg{flex-wrap:nowrap;overflow-x:auto;justify-content:flex-start;border-radius:999px;scrollbar-width:none;width:auto}
+  .seg::-webkit-scrollbar{display:none}
+  .tab{flex:none}
+  .panel{padding:26px 20px;border-radius:26px}
+  .panel h3{font-size:32px}
+  .panel-art{width:72px;height:72px;border-radius:22px}
   .svc-list{grid-template-columns:1fr}
   .steps{grid-template-columns:1fr}
-  .col{padding:26px;border-radius:22px}
-  .desks{grid-template-columns:1fr}
-  .desk,.desk:nth-child(2n){padding:24px 0;border-left:0}
-  .faq summary{font-size:19px}
-  .faq .ans{padding-right:0}
+  .col{padding:28px 22px;border-radius:26px}
+  .bento{grid-template-columns:1fr}
+  .desk{padding:26px}
+  .faq summary{font-size:19px;padding:20px}
+  .faq .ans{padding:0 20px 22px}
   .channels{grid-template-columns:1fr}
-  .form{padding:24px;border-radius:22px}
+  .form{padding:30px 20px;border-radius:26px}
   .foot-grid{grid-template-columns:1fr}
   .fab span{display:none}
-  .fab{padding:0;width:58px;justify-content:center}
+  .fab{padding:0;width:60px;justify-content:center}
 }
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}
@@ -329,74 +364,92 @@ button,input,select,textarea{font:inherit;color:inherit}
   <defs>
     <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></symbol>
     <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></symbol>
-    <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M20 6 9 17l-5-5"/></symbol>
-    <symbol id="i-x" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M18 6 6 18M6 6l12 12"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></g></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></g></symbol>
+    <symbol id="i-head" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14v-2a8 8 0 0 1 16 0v2"/><rect x="3" y="14" width="4" height="6" rx="1.5"/><rect x="17" y="14" width="4" height="6" rx="1.5"/></g></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" d="M18 6 6 18M6 6l12 12"/></symbol>
     <symbol id="i-plus" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" d="M12 5v14M5 12h14"/></symbol>
     <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></symbol>
-    <symbol id="i-in" viewBox="0 0 24 24"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM10 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C21.6 8.65 22 11.2 22 14.5V21h-4v-5.8c0-1.4 0-3.2-1.95-3.2S13.8 13.5 13.8 15.1V21H10z"/></symbol>
+    <symbol id="i-in" viewBox="0 0 24 24"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM10 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C21.6 8.65 22 11.2 22 14.5V21h-4v-5.8c0-1.4 0-3.2-1.950-3.2S13.8 13.5 13.8 15.1V21H10z"/></symbol>
     <symbol id="i-fb" viewBox="0 0 24 24"><path fill="currentColor" d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.8c0-.9.3-1.6 1.6-1.6h1.7V4.4c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.3H7.4V14h2.7v8z"/></symbol>
     <symbol id="i-xc" viewBox="0 0 24 24"><path fill="currentColor" d="M17.75 3h3.07l-6.7 7.66L22 21h-6.17l-4.83-6.32L5.47 21H2.4l7.17-8.2L2 3h6.33l4.37 5.77zm-1.08 16.2h1.7L7.4 4.73H5.58z"/></symbol>
     <symbol id="i-yt" viewBox="0 0 24 24"><path fill="currentColor" d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.75 15.02V8.98L15.5 12z"/></symbol>
-    <!-- category icons -->
-    <symbol id="c-reg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V8l8-5 8 5v13"/><path d="M9 21v-6h6v6"/><path d="M3 21h18"/></g></symbol>
-    <symbol id="c-comp" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="17" rx="2"/><path d="M8 2v4M16 2v4M4 10h16"/><path d="m9 15 2 2 4-4"/></g></symbol>
-    <symbol id="c-ipr" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/><path d="M14.5 9.5a3 3 0 1 0 0 5"/></g></symbol>
-    <symbol id="c-tax" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"/><path d="M9 8h6M9 12h6M9 16h3"/></g></symbol>
-    <symbol id="c-lic" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="m8.5 14-1.5 7 5-3 5 3-1.5-7"/></g></symbol>
-    <symbol id="c-shr" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M7 9h6M7 13h10"/><circle cx="17" cy="9" r="1.2"/></g></symbol>
+    <symbol id="c-reg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V8l8-5 8 5v13"/><path d="M9 21v-6h6v6"/><path d="M3 21h18"/></g></symbol>
+    <symbol id="c-comp" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="17" rx="2"/><path d="M8 2v4M16 2v4M4 10h16"/><path d="m9 15 2 2 4-4"/></g></symbol>
+    <symbol id="c-ipr" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/><path d="M14.5 9.5a3 3 0 1 0 0 5"/></g></symbol>
+    <symbol id="c-tax" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"/><path d="M9 8h6M9 12h6M9 16h3"/></g></symbol>
+    <symbol id="c-lic" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="m8.5 14-1.5 7 5-3 5 3-1.5-7"/></g></symbol>
+    <symbol id="c-shr" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M7 9h6M7 13h10"/><circle cx="17" cy="9" r="1.2"/></g></symbol>
+    <symbol id="c-bank" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10 12 4l9 6"/><path d="M5 10v8M9.5 10v8M14.5 10v8M19 10v8M3 21h18"/></g></symbol>
+    <symbol id="c-team" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7M18 14a6 6 0 0 1 3.5 6"/></g></symbol>
+    <symbol id="c-lock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/><circle cx="12" cy="15.5" r="1.5"/></g></symbol>
+    <symbol id="c-coin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v6c0 1.7 3.6 3 8 3s8-1.3 8-3V6"/><path d="M4 12v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></g></symbol>
   </defs>
 </svg>
 
 <header class="nav" id="nav">
-  <div class="wrap nav-in">
-    <a class="logo" href="#top" aria-label="Muds Assets Distribution, home">
-      <img class="logo-img" src="muds-logo.png" alt="" width="62" height="60">
-      <span class="logo-txt">Muds Assets<small>Distribution</small></span>
-    </a>
-    <nav class="nav-links" aria-label="Main">
+  <div class="wrap">
+    <div class="nav-in">
+      <a class="logo" href="#top" aria-label="Muds Assets Distribution, home">
+        <span class="logo-pill"><img src="muds-logo.png" alt="" width="48" height="46"></span>
+        <span class="logo-txt">Muds Assets<small>Distribution</small></span>
+      </a>
+      <nav class="nav-links" aria-label="Main">
+        <a href="#services">Services</a>
+        <a href="#process">How it works</a>
+        <a href="#why">Why Muds</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-cta">
+        <a class="btn btn-glass" href="tel:+919599653306"><svg aria-hidden="true"><use href="#i-phone"/></svg>Call us</a>
+        <a class="btn btn-primary" href="#contact">Free consultation</a>
+        <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+      </div>
+    </div>
+    <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile">
       <a href="#services">Services</a>
       <a href="#process">How it works</a>
       <a href="#why">Why Muds</a>
       <a href="#faq">FAQ</a>
       <a href="#contact">Contact</a>
+      <a href="tel:+919599653306">Call +91 95996 53306</a>
     </nav>
-    <div class="nav-cta">
-      <a class="btn btn-ghost" href="tel:+919599653306"><svg aria-hidden="true"><use href="#i-phone"/></svg>Call us</a>
-      <a class="btn btn-primary" href="#contact">Free consultation</a>
-      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg></button>
-    </div>
   </div>
-  <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile">
-    <a href="#services">Services</a>
-    <a href="#process">How it works</a>
-    <a href="#why">Why Muds</a>
-    <a href="#faq">FAQ</a>
-    <a href="#contact">Contact</a>
-  </nav>
 </header>
 
 <main id="main">
-<!-- HERO -->
 <section class="hero" id="top">
+  <div class="aurora" aria-hidden="true"><span class="a1"></span><span class="a2"></span><span class="a3"></span><span class="a4"></span></div>
+  <div class="grain" aria-hidden="true"></div>
   <div class="wrap hero-grid">
     <div>
+      <span class="badge"><b><svg aria-hidden="true"><use href="#i-star"/></svg>4.5</b>Rated on Google by 1000+ clients</span>
       <h1>Start your company. Leave the filings to us.</h1>
       <p class="hero-sub">Company registration, compliance, tax and legal work, handled by one team of Chartered Accountants, Company Secretaries and Advocates in Gurgaon. Serving businesses since 2013.</p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="#contact">Book a free consultation</a>
         <a class="btn btn-wa" href="https://wa.me/917042621771" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Chat on WhatsApp</a>
       </div>
-      <p class="hero-note">Mon to Sat, 10 AM to 7 PM. Call <a href="tel:+919599653306" style="white-space:nowrap">+91 95996 53306</a>.</p>
+      <p class="hero-note">Mon to Sat, 10 AM to 7 PM. Call <a href="tel:+919599653306">+91 95996 53306</a>.</p>
     </div>
 
     <div class="stage">
+      <div class="arc-glow" aria-hidden="true"></div>
+      <svg class="arc" viewBox="0 0 400 300" aria-hidden="true">
+        <path pathLength="100" stroke="#E8264A" d="M 62 252 A 160 160 0 0 1 48 160"/>
+        <path pathLength="100" stroke="#F7B22D" d="M 53 132 A 160 160 0 0 1 112 54"/>
+        <path pathLength="100" stroke="#1FA3E0" d="M 136 39 A 160 160 0 0 1 264 39"/>
+        <path pathLength="100" stroke="#8A6CE0" d="M 288 54 A 160 160 0 0 1 347 132"/>
+        <path pathLength="100" stroke="#3DBB5C" d="M 352 160 A 160 160 0 0 1 338 252"/>
+      </svg>
       <div class="cert-wrap" id="certWrap">
         <svg class="cert" viewBox="0 0 560 400" role="img" aria-labelledby="certTitle">
           <title id="certTitle">Illustration of a certificate of incorporation with the business name you type</title>
           <defs>
-            <pattern id="guil" width="14" height="14" patternUnits="userSpaceOnUse">
-              <circle cx="7" cy="7" r="6" fill="none" stroke="#C9D2E3" stroke-width=".8"/>
-            </pattern>
+            <pattern id="guil" width="14" height="14" patternUnits="userSpaceOnUse"><circle cx="7" cy="7" r="6" fill="none" stroke="#CBD1E6" stroke-width=".8"/></pattern>
+            <linearGradient id="spec" x1="0" x2="1"><stop offset="0" stop-color="#E8264A"/><stop offset=".25" stop-color="#F7B22D"/><stop offset=".5" stop-color="#3DBB5C"/><stop offset=".75" stop-color="#1FA3E0"/><stop offset="1" stop-color="#8A6CE0"/></linearGradient>
             <filter id="ink" x="-20%" y="-20%" width="140%" height="140%">
               <feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="4" result="n"/>
               <feColorMatrix in="n" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -1.6 1.25" result="m"/>
@@ -405,38 +458,35 @@ button,input,select,textarea{font:inherit;color:inherit}
             </filter>
             <path id="ring" d="M 0,0 m -58,0 a 58,58 0 1,1 116,0 a 58,58 0 1,1 -116,0"/>
           </defs>
-          <rect x="0" y="0" width="560" height="400" rx="10" fill="#FFFFFF"/>
-          <rect x="14" y="14" width="532" height="372" rx="6" fill="url(#guil)" opacity=".55"/>
-          <rect x="30" y="30" width="500" height="340" rx="4" fill="#FFFFFF" stroke="#0E2240" stroke-width="1.4"/>
-          <rect x="36" y="36" width="488" height="328" rx="3" fill="none" stroke="#C9D2E3" stroke-width="1"/>
+          <rect x="0" y="0" width="560" height="400" rx="12" fill="#FFFFFF"/>
+          <rect x="14" y="14" width="532" height="372" rx="6" fill="url(#guil)" opacity=".6"/>
+          <rect x="30" y="30" width="500" height="340" rx="4" fill="#FFFFFF" stroke="#0B1033" stroke-width="1.4"/>
+          <rect x="36" y="36" width="488" height="328" rx="3" fill="none" stroke="#CBD1E6" stroke-width="1"/>
           <text class="ttl" x="280" y="78" text-anchor="middle">CERTIFICATE OF</text>
           <text class="big" x="280" y="116" text-anchor="middle">Incorporation</text>
-          <line x1="200" y1="134" x2="360" y2="134" stroke="#F29A1F" stroke-width="3" stroke-linecap="round"/>
+          <rect x="210" y="130" width="140" height="4" rx="2" fill="url(#spec)"/>
           <text class="lbl" x="64" y="172">This is to certify that</text>
-          <text class="name" x="64" y="212"><tspan id="certName">Sharma Foods</tspan><tspan id="certSuffix"> Private Limited</tspan><tspan class="caret" id="caret" fill="#5B3FD0">|</tspan></text>
-          <line x1="64" y1="226" x2="496" y2="226" stroke="#C9D2E3" stroke-width="1"/>
+          <text class="name" x="64" y="212"><tspan id="certName">Sharma Foods</tspan><tspan id="certSuffix"> Private Limited</tspan><tspan class="caret" id="caret" fill="#6B4FE0">|</tspan></text>
+          <line x1="64" y1="226" x2="496" y2="226" stroke="#CBD1E6" stroke-width="1"/>
           <text class="lbl" x="64" y="262">Entity type</text>
           <text class="val" x="64" y="286" id="certType">Private Limited Company</text>
           <text class="lbl" x="64" y="322">Prepared by</text>
           <text class="val" x="64" y="346">Muds Assets Distribution</text>
           <g transform="translate(424 300)">
             <g class="stamp" id="stamp" filter="url(#ink)">
-              <circle r="70" fill="none" stroke="#5B3FD0" stroke-width="5"/>
-              <circle r="47" fill="none" stroke="#5B3FD0" stroke-width="2.5"/>
-              <text font-family="Mukta,sans-serif" font-weight="700" font-size="11.5" letter-spacing="2.6" fill="#5B3FD0"><textPath href="#ring" startOffset="0">MUDS REGISTRATION DESK ✦ GURGAON ✦ SINCE 2013 ✦</textPath></text>
+              <circle r="70" fill="none" stroke="#6B4FE0" stroke-width="5"/>
+              <circle r="47" fill="none" stroke="#6B4FE0" stroke-width="2.5"/>
+              <text font-family="Mukta,sans-serif" font-weight="700" font-size="11.5" letter-spacing="2.6" fill="#6B4FE0"><textPath href="#ring" startOffset="0">MUDS REGISTRATION DESK ✦ GURGAON ✦ SINCE 2013 ✦</textPath></text>
               <rect x="-62" y="-15" width="124" height="30" rx="3" fill="#FFFFFF"/>
-              <rect x="-62" y="-15" width="124" height="30" rx="3" fill="none" stroke="#5B3FD0" stroke-width="3"/>
-              <text x="0" y="7" text-anchor="middle" font-family="Bricolage Grotesque,sans-serif" font-weight="800" font-size="19" letter-spacing="1.5" fill="#5B3FD0">REGISTERED</text>
+              <rect x="-62" y="-15" width="124" height="30" rx="3" fill="none" stroke="#6B4FE0" stroke-width="3"/>
+              <text x="0" y="7" text-anchor="middle" font-family="Bricolage Grotesque,sans-serif" font-weight="800" font-size="19" letter-spacing="1.5" fill="#6B4FE0">REGISTERED</text>
             </g>
           </g>
         </svg>
       </div>
-
-      <form class="try" id="tryForm" onsubmit="return false">
+      <form class="try" onsubmit="return false">
         <label for="tryName">See your business name on it</label>
-        <div class="try-row">
-          <input id="tryName" type="text" maxlength="28" placeholder="Type your business name" autocomplete="organization">
-        </div>
+        <input id="tryName" type="text" maxlength="28" placeholder="Type your business name" autocomplete="organization">
         <div class="chips" role="group" aria-label="Entity type">
           <button type="button" class="chip" data-type="pvt" aria-pressed="true">Private Limited</button>
           <button type="button" class="chip" data-type="llp" aria-pressed="false">LLP</button>
@@ -446,35 +496,31 @@ button,input,select,textarea{font:inherit;color:inherit}
       </form>
     </div>
   </div>
-</section>
 
-<!-- PROOF -->
-<section class="proof" aria-label="Muds in numbers">
-  <div class="wrap proof-in">
-    <div class="proof-item"><div class="proof-num"><svg aria-hidden="true" style="color:#F29A1F"><use href="#i-star"/></svg><span data-count="4.5" data-dec="1">4.5</span></div><div class="proof-lbl">Google rating, 1000+ reviews</div></div>
-    <div class="proof-item"><div class="proof-num"><svg aria-hidden="true" style="color:#00B67A"><use href="#i-star"/></svg><span data-count="4.1" data-dec="1">4.1</span></div><div class="proof-lbl">Trustpilot rating</div></div>
-    <div class="proof-item"><div class="proof-num"><span data-count="35000" data-suffix="+">35,000+</span></div><div class="proof-lbl">Clients served</div></div>
-    <div class="proof-item"><div class="proof-num"><span data-count="110" data-suffix="+">110+</span></div><div class="proof-lbl">CAs, CSs and Advocates</div></div>
-    <div class="proof-item"><div class="proof-num"><span>2013</span></div><div class="proof-lbl">Serving businesses since</div></div>
+  <div class="wrap proof" aria-label="Muds in numbers">
+    <div class="proof-in">
+      <div class="proof-item"><div class="proof-num"><svg aria-hidden="true" style="color:#F7B22D"><use href="#i-star"/></svg><span data-count="4.5" data-dec="1">4.5</span></div><div class="proof-lbl">Google rating from 1000+ reviews</div><div class="bar" style="background:#F7B22D"></div></div>
+      <div class="proof-item"><div class="proof-num"><svg aria-hidden="true" style="color:#3DBB5C"><use href="#i-star"/></svg><span data-count="4.1" data-dec="1">4.1</span></div><div class="proof-lbl">Trustpilot rating</div><div class="bar" style="background:#3DBB5C"></div></div>
+      <div class="proof-item"><div class="proof-num"><span data-count="35000" data-suffix="+">35,000+</span></div><div class="proof-lbl">Clients served</div><div class="bar" style="background:#1FA3E0"></div></div>
+      <div class="proof-item"><div class="proof-num"><span data-count="110" data-suffix="+">110+</span></div><div class="proof-lbl">CAs, CSs and Advocates</div><div class="bar" style="background:#8A6CE0"></div></div>
+      <div class="proof-item"><div class="proof-num"><span>2013</span></div><div class="proof-lbl">Serving businesses since</div><div class="bar" style="background:#E8264A"></div></div>
+    </div>
   </div>
 </section>
 
-<!-- SERVICES -->
-<section class="sec" id="services">
+<section class="sec surface" id="services">
   <div class="wrap">
-    <div class="sec-head">
+    <div class="sec-head center">
       <h2>What does your business need right now?</h2>
-      <p>Pick where you are. Each service is handled end to end by the same team, so nothing falls between vendors.</p>
+      <p>Pick where you are. Every service is handled end to end by the same team, so nothing falls between vendors.</p>
     </div>
-    <div class="picker">
-      <div class="tabs" role="tablist" aria-label="Service categories" id="tabs"></div>
-      <div class="panel" role="tabpanel" id="panel" tabindex="0"></div>
-    </div>
+    <div class="seg" role="tablist" aria-label="Service categories" id="tabs"></div>
+    <div class="panel" role="tabpanel" id="panel" tabindex="0"></div>
   </div>
 </section>
 
-<!-- PROCESS -->
-<section class="sec process" id="process">
+<section class="sec dark" id="process">
+  <div class="aurora" aria-hidden="true" style="opacity:.6"><span class="a2" style="left:-200px;right:auto;top:auto;bottom:-200px"></span><span class="a1" style="left:auto;right:-200px"></span></div>
   <div class="wrap">
     <div class="sec-head">
       <h2>From first message to registered.</h2>
@@ -483,14 +529,14 @@ button,input,select,textarea{font:inherit;color:inherit}
     <div class="track" id="track">
       <div class="track-line"><div class="track-fill" id="trackFill"></div></div>
       <ol class="steps">
-        <li class="step"><div class="step-dot">1</div><h3>Tell us what you need</h3><p>Share your requirement online, by call or on WhatsApp. An expert reviews it and calls you back.</p>
-          <div class="mini" aria-hidden="true"><div class="mini-row"><span>Service</span><b>Private Limited</b></div><div class="mini-row"><span>Consultation</span><b>Free</b></div></div></li>
-        <li class="step"><div class="step-dot">2</div><h3>Share details and documents</h3><p>Add your business details and upload documents securely. We verify each one before filing.</p>
-          <div class="mini" aria-hidden="true"><div class="mini-row"><span>Name options</span><b>3 added</b></div><div class="mini-row"><span>Documents</span><b>Verified</b></div></div></li>
-        <li class="step"><div class="step-dot">3</div><h3>Confirm and pay</h3><p>Pay online once your quotation is confirmed. Our experts take the filing forward from here.</p>
-          <div class="mini" aria-hidden="true"><div class="mini-row"><span>Quotation</span><b>Confirmed</b></div><div class="mini-row"><span>Payment</span><b>Received</b></div></div></li>
-        <li class="step"><div class="step-dot">4</div><h3>Get confirmation and next steps</h3><p>Receive confirmation by email, then help with bank account, GST and ongoing compliance.</p>
-          <div class="mini" aria-hidden="true"><div class="mini-row"><span>Filing</span><b>Submitted</b></div><div class="mini-row"><span>Next</span><b>Expert call</b></div></div></li>
+        <li class="step" style="--sc:#E8264A"><div class="step-dot">1</div><div class="step-card"><h3>Tell us what you need</h3><p>Share your requirement online, by call or on WhatsApp. An expert reviews it and calls you back.</p>
+          <div class="mini" aria-hidden="true"><div class="mini-row"><span>Service</span><b>Private Limited</b></div><div class="mini-row"><span>Consultation</span><b><i></i>Free</b></div></div></div></li>
+        <li class="step" style="--sc:#F7B22D"><div class="step-dot">2</div><div class="step-card"><h3>Share details and documents</h3><p>Add your business details and upload documents securely. We verify each one before filing.</p>
+          <div class="mini" aria-hidden="true"><div class="mini-row"><span>Name options</span><b>3 added</b></div><div class="mini-row"><span>Documents</span><b><i></i>Verified</b></div></div></div></li>
+        <li class="step" style="--sc:#1FA3E0"><div class="step-dot">3</div><div class="step-card"><h3>Confirm and pay</h3><p>Pay online once your quotation is confirmed. Our experts take the filing forward from here.</p>
+          <div class="mini" aria-hidden="true"><div class="mini-row"><span>Quotation</span><b>Confirmed</b></div><div class="mini-row"><span>Payment</span><b><i></i>Received</b></div></div></div></li>
+        <li class="step" style="--sc:#3DBB5C"><div class="step-dot">4</div><div class="step-card"><h3>Get confirmation and next steps</h3><p>Receive confirmation by email, then help with bank account, GST and ongoing compliance.</p>
+          <div class="mini" aria-hidden="true"><div class="mini-row"><span>Filing</span><b>Submitted</b></div><div class="mini-row"><span>Next</span><b><i></i>Expert call</b></div></div></div></li>
       </ol>
     </div>
     <div class="process-cta">
@@ -500,7 +546,6 @@ button,input,select,textarea{font:inherit;color:inherit}
   </div>
 </section>
 
-<!-- WHY -->
 <section class="sec" id="why">
   <div class="wrap">
     <div class="sec-head">
@@ -511,58 +556,66 @@ button,input,select,textarea{font:inherit;color:inherit}
       <div class="col col-them">
         <h3>Typical online filing portals</h3>
         <ul>
-          <li><svg aria-hidden="true"><use href="#i-x"/></svg>Focused mainly on registration and routine filings</li>
-          <li><svg aria-hidden="true"><use href="#i-x"/></svg>Separate vendors for legal, tax, HR and capital markets</li>
-          <li><svg aria-hidden="true"><use href="#i-x"/></svg>Limited advice beyond the form being filed</li>
-          <li><svg aria-hidden="true"><use href="#i-x"/></svg>Support through a general queue</li>
+          <li><span class="mk"><svg aria-hidden="true"><use href="#i-x"/></svg></span>Focused mainly on registration and routine filings</li>
+          <li><span class="mk"><svg aria-hidden="true"><use href="#i-x"/></svg></span>Separate vendors for legal, tax, HR and capital markets</li>
+          <li><span class="mk"><svg aria-hidden="true"><use href="#i-x"/></svg></span>Limited advice beyond the form being filed</li>
+          <li><span class="mk"><svg aria-hidden="true"><use href="#i-x"/></svg></span>Support through a general queue</li>
         </ul>
       </div>
       <div class="col col-us">
-        <h3>With Muds Assets Distribution</h3>
+        <h3><img src="muds-logo.png" alt="" width="44" height="42">With Muds Assets Distribution</h3>
         <ul>
-          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Registration, compliance, legal, HR and financial services in one firm</li>
-          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Chartered Accountants, Company Secretaries and Advocates on one team</li>
-          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Advice on structure first, filing second</li>
-          <li><svg aria-hidden="true"><use href="#i-check"/></svg>A dedicated point of contact from start to finish</li>
+          <li><span class="mk"><svg aria-hidden="true"><use href="#i-check"/></svg></span>Registration, compliance, legal, HR and financial services in one firm</li>
+          <li><span class="mk"><svg aria-hidden="true"><use href="#i-check"/></svg></span>Chartered Accountants, Company Secretaries and Advocates on one team</li>
+          <li><span class="mk"><svg aria-hidden="true"><use href="#i-check"/></svg></span>Advice on structure first, filing second</li>
+          <li><span class="mk"><svg aria-hidden="true"><use href="#i-check"/></svg></span>A dedicated point of contact from start to finish</li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- DESKS -->
-<section class="sec" style="padding-top:0" aria-labelledby="desksTitle">
+<section class="sec surface" aria-labelledby="desksTitle">
   <div class="wrap">
     <div class="sec-head">
       <h2 id="desksTitle">Specialist desks most portals don't have.</h2>
+      <p>Paperwork-heavy work that needs people who have done it many times before.</p>
     </div>
-    <div class="desks">
-      <div class="desk"><h3><svg aria-hidden="true"><use href="#c-shr"/></svg>Physical shares recovery</h3><p>Tracing and recovering old physical share certificates, plus transmission and transposition.</p></div>
-      <div class="desk"><h3><svg aria-hidden="true"><use href="#c-tax"/></svg>IEPF claims</h3><p>Support with claims for shares and dividends transferred to the IEPF.</p></div>
-      <div class="desk"><h3><svg aria-hidden="true"><use href="#c-lic"/></svg>Merchant banking</h3><p>Support for fundraising and IPO preparation.</p></div>
-      <div class="desk"><h3><svg aria-hidden="true"><use href="#c-reg"/></svg>ESOP structuring</h3><p>Designing and documenting employee stock option plans.</p></div>
-      <div class="desk"><h3><svg aria-hidden="true"><use href="#c-comp"/></svg>NBFC services</h3><p>Registration and compliance for non-banking finance companies.</p></div>
-      <div class="desk"><h3><svg aria-hidden="true"><use href="#c-ipr"/></svg>DPDP compliance</h3><p>Getting ready for India's Digital Personal Data Protection Act.</p></div>
+    <div class="bento">
+      <div class="desk wide" style="--c:#E8264A"><div class="ico"><svg aria-hidden="true"><use href="#c-shr"/></svg></div><h3>Physical shares recovery</h3><p>Tracing and recovering old physical share certificates, plus transmission and transposition.</p></div>
+      <div class="desk wide" style="--c:#E89A0C"><div class="ico"><svg aria-hidden="true"><use href="#c-coin"/></svg></div><h3>IEPF claims</h3><p>Support with claims for shares and dividends transferred to the IEPF.</p></div>
+      <div class="desk" style="--c:#1FA3E0"><div class="ico"><svg aria-hidden="true"><use href="#c-bank"/></svg></div><h3>Merchant banking</h3><p>Support for fundraising and IPO preparation.</p></div>
+      <div class="desk" style="--c:#8A6CE0"><div class="ico"><svg aria-hidden="true"><use href="#c-team"/></svg></div><h3>ESOP structuring</h3><p>Designing and documenting employee stock option plans.</p></div>
+      <div class="desk" style="--c:#3DBB5C"><div class="ico"><svg aria-hidden="true"><use href="#c-lock"/></svg></div><h3>DPDP compliance</h3><p>Getting ready for India's Digital Personal Data Protection Act.</p></div>
+      <div class="desk full" style="--c:#1BA89C"><div class="ico"><svg aria-hidden="true"><use href="#c-comp"/></svg></div><h3>NBFC services</h3><p>Registration and compliance for non-banking finance companies.</p></div>
     </div>
   </div>
 </section>
 
-<!-- LEARN -->
-<section class="sec learn" aria-labelledby="learnTitle">
+<section class="sec dark" aria-labelledby="learnTitle">
+  <div class="aurora" aria-hidden="true" style="opacity:.55"><span class="a3" style="right:-100px;bottom:-200px"></span><span class="a1" style="left:-260px;top:auto;bottom:-240px"></span></div>
   <div class="wrap learn-card">
     <div>
       <h2 id="learnTitle">Understand the Companies Act before you sign anything.</h2>
       <p>Our YouTube channel explains the Companies Act, 2013 and everyday compliance in plain language, so you know what each filing is for.</p>
-      <a class="btn btn-ink" href="https://www.youtube.com/@ShwetaGuptaCompaniesAct2013/videos" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-yt"/></svg>Watch on YouTube</a>
+      <a class="btn btn-primary" href="https://www.youtube.com/@ShwetaGuptaCompaniesAct2013/videos" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-yt"/></svg>Watch on YouTube</a>
     </div>
     <a class="player" href="https://www.youtube.com/@ShwetaGuptaCompaniesAct2013/videos" target="_blank" rel="noopener" aria-label="Open the Companies Act, 2013 video channel on YouTube">
       <svg class="bg" viewBox="0 0 640 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-        <rect width="640" height="400" fill="#0E2240"/>
-        <g fill="none" stroke="#16325A" stroke-width="2">
-          <circle cx="520" cy="80" r="160"/><circle cx="520" cy="80" r="110"/><circle cx="520" cy="80" r="60"/>
+        <defs>
+          <linearGradient id="pg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#161E4D"/><stop offset="1" stop-color="#2A1A5E"/></linearGradient>
+          <radialGradient id="pr" cx=".75" cy=".2" r=".6"><stop offset="0" stop-color="#E8264A" stop-opacity=".55"/><stop offset="1" stop-color="#E8264A" stop-opacity="0"/></radialGradient>
+        </defs>
+        <rect width="640" height="400" fill="url(#pg)"/>
+        <rect width="640" height="400" fill="url(#pr)"/>
+        <g fill="none" stroke-width="10" stroke-linecap="round" opacity=".9" transform="translate(320 330)">
+          <path d="M -230 0 A 230 230 0 0 1 -200 -114" stroke="#E8264A"/>
+          <path d="M -186 -136 A 230 230 0 0 1 -98 -208" stroke="#F7B22D"/>
+          <path d="M -70 -219 A 230 230 0 0 1 70 -219" stroke="#1FA3E0"/>
+          <path d="M 98 -208 A 230 230 0 0 1 186 -136" stroke="#8A6CE0"/>
+          <path d="M 200 -114 A 230 230 0 0 1 230 0" stroke="#3DBB5C"/>
         </g>
-        <g fill="#16325A"><rect x="40" y="60" width="200" height="14" rx="7"/><rect x="40" y="88" width="140" height="14" rx="7"/><rect x="40" y="116" width="170" height="14" rx="7"/></g>
-        <text x="40" y="250" font-family="Bricolage Grotesque,sans-serif" font-weight="800" font-size="120" fill="#16325A">2013</text>
+        <text x="-10" y="400" font-family="Bricolage Grotesque,sans-serif" font-weight="800" font-size="190" fill="#FFFFFF" fill-opacity=".05">2013</text>
       </svg>
       <span class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6 4v16l14-8z"/></svg></span>
       <span class="cap">Companies Act, 2013 explained<small>Video explainers on YouTube</small></span>
@@ -570,14 +623,14 @@ button,input,select,textarea{font:inherit;color:inherit}
   </div>
 </section>
 
-<!-- FAQ -->
-<section class="sec faq" id="faq">
+<section class="sec surface faq" id="faq">
   <div class="wrap faq-grid">
     <div class="sec-head" style="margin-bottom:0">
       <h2>Questions founders ask us first.</h2>
       <p>Don't see yours? Ask on WhatsApp and an expert will answer.</p>
+      <a class="btn btn-wa" style="margin-top:28px" href="https://wa.me/917042621771" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Ask on WhatsApp</a>
     </div>
-    <div>
+    <div class="faq-list">
       <details open><summary>Which business structure should I choose?<span class="pm"><svg aria-hidden="true"><use href="#i-plus"/></svg></span></summary><div class="ans">It depends on how many owners you have, whether you plan to raise funding, and how much personal liability you can take on. In a free consultation we compare Private Limited, LLP, One Person Company, partnership and proprietorship for your situation.</div></details>
       <details><summary>What documents do I need to register a company?<span class="pm"><svg aria-hidden="true"><use href="#i-plus"/></svg></span></summary><div class="ans">Usually identity and address proof for each director and shareholder, and proof of the registered office address. We send you an exact checklist after the consultation, based on the structure you choose.</div></details>
       <details><summary>How long does registration take?<span class="pm"><svg aria-hidden="true"><use href="#i-plus"/></svg></span></summary><div class="ans">It depends on name approval and government processing. Once your documents are verified, we share an estimated timeline and keep you updated at each stage.</div></details>
@@ -587,18 +640,19 @@ button,input,select,textarea{font:inherit;color:inherit}
   </div>
 </section>
 
-<!-- CONTACT -->
-<section class="sec contact" id="contact">
+<section class="sec dark contact" id="contact">
+  <div class="aurora" aria-hidden="true"><span class="a1" style="left:-160px;top:-160px"></span><span class="a2" style="right:-120px;top:auto;bottom:-200px"></span><span class="a4" style="left:40%;top:10%"></span></div>
+  <div class="grain" aria-hidden="true"></div>
   <div class="wrap contact-grid">
     <div>
       <h2>Talk to an expert, free.</h2>
       <p class="lead">Tell us what you need. We'll suggest the right structure, the documents to keep ready and a realistic timeline.</p>
       <div class="channels">
-        <a class="channel" href="https://wa.me/917042621771" target="_blank" rel="noopener"><span>WhatsApp</span><b>+91 70426 21771</b></a>
-        <a class="channel" href="tel:+919599653306"><span>Call an expert</span><b>+91 95996 53306</b></a>
-        <a class="channel" href="tel:08069204610"><span>Customer care</span><b>0806 920 4610</b></a>
-        <a class="channel" href="mailto:info@muds.co.in"><span>Email</span><b>info@muds.co.in</b></a>
-        <a class="channel" style="grid-column:1/-1" href="https://www.google.com/maps/search/?api=1&amp;query=IDC-31b+Sector-16+MG+Road+Gurgaon+Haryana+122007" target="_blank" rel="noopener"><span>Visit our office</span><b>IDC-31b, Sector-16, Main MG Road, Gurgaon, Haryana 122007</b></a>
+        <a class="channel" style="--c:#0F7A3A" href="https://wa.me/917042621771" target="_blank" rel="noopener"><span class="ci"><svg aria-hidden="true"><use href="#i-wa"/></svg></span><span class="ct"><span>WhatsApp</span><b>+91 70426 21771</b></span></a>
+        <a class="channel" style="--c:#1A8BC4" href="tel:+919599653306"><span class="ci"><svg aria-hidden="true"><use href="#i-phone"/></svg></span><span class="ct"><span>Call an expert</span><b>+91 95996 53306</b></span></a>
+        <a class="channel" style="--c:#7356D6" href="tel:08069204610"><span class="ci"><svg aria-hidden="true"><use href="#i-head"/></svg></span><span class="ct"><span>Customer care</span><b>0806 920 4610</b></span></a>
+        <a class="channel" style="--c:#D61F42" href="mailto:info@muds.co.in"><span class="ci"><svg aria-hidden="true"><use href="#i-mail"/></svg></span><span class="ct"><span>Email</span><b>info@muds.co.in</b></span></a>
+        <a class="channel" style="--c:#C98A0E;grid-column:1/-1" href="https://www.google.com/maps/search/?api=1&amp;query=IDC-31b+Sector-16+MG+Road+Gurgaon+Haryana+122007" target="_blank" rel="noopener"><span class="ci"><svg aria-hidden="true"><use href="#i-pin"/></svg></span><span class="ct"><span>Visit our office</span><b>IDC-31b, Sector-16, Main MG Road, Gurgaon, Haryana 122007</b></span></a>
       </div>
     </div>
     <form class="form" id="leadForm" novalidate>
@@ -624,16 +678,16 @@ button,input,select,textarea{font:inherit;color:inherit}
   <div class="wrap">
     <div class="foot-grid">
       <div>
-        <a class="logo" href="#top" aria-label="Muds Assets Distribution, back to top"><span class="logo-tile"><img src="muds-logo.png" alt="" width="84" height="81"></span><span class="logo-txt">Muds Assets<small>Distribution</small></span></a>
+        <a class="logo" href="#top" aria-label="Muds Assets Distribution, back to top"><span class="logo-pill" style="height:66px;padding:0 16px 0 10px"><img src="muds-logo.png" alt="" width="62" height="60" style="height:58px"></span><span class="logo-txt">Muds Assets<small>Distribution</small></span></a>
         <address>IDC-31b, Sector-16, Main MG Road<br>Gurgaon, Haryana 122007<br>
           <a href="tel:+911141182222">Office: +91-11-41182222</a><br>
           <a href="tel:+919599653306">Phone: +91 95996 53306</a><br>
           <a href="mailto:info@muds.co.in">info@muds.co.in</a></address>
         <div class="socials">
-          <a href="https://www.linkedin.com/company/muds-management-private-limited/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg aria-hidden="true"><use href="#i-in"/></svg></a>
-          <a href="https://www.facebook.com/mudsmanagement/" target="_blank" rel="noopener" aria-label="Facebook"><svg aria-hidden="true"><use href="#i-fb"/></svg></a>
-          <a href="https://x.com/mudsmanagement1" target="_blank" rel="noopener" aria-label="X"><svg aria-hidden="true"><use href="#i-xc"/></svg></a>
-          <a href="https://www.youtube.com/@ShwetaGuptaCompaniesAct2013/videos" target="_blank" rel="noopener" aria-label="YouTube"><svg aria-hidden="true"><use href="#i-yt"/></svg></a>
+          <a style="--c:#0A66C2" href="https://www.linkedin.com/company/muds-management-private-limited/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg aria-hidden="true"><use href="#i-in"/></svg></a>
+          <a style="--c:#1877F2" href="https://www.facebook.com/mudsmanagement/" target="_blank" rel="noopener" aria-label="Facebook"><svg aria-hidden="true"><use href="#i-fb"/></svg></a>
+          <a style="--c:#3A4270" href="https://x.com/mudsmanagement1" target="_blank" rel="noopener" aria-label="X"><svg aria-hidden="true"><use href="#i-xc"/></svg></a>
+          <a style="--c:#E8264A" href="https://www.youtube.com/@ShwetaGuptaCompaniesAct2013/videos" target="_blank" rel="noopener" aria-label="YouTube"><svg aria-hidden="true"><use href="#i-yt"/></svg></a>
         </div>
       </div>
       <div><h4>Register</h4><ul id="fl-reg"></ul></div>
@@ -651,10 +705,10 @@ button,input,select,textarea{font:inherit;color:inherit}
   var WA = 'https://wa.me/917042621771?text=';
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   function waLink(msg){ return WA + encodeURIComponent(msg); }
+  function esc(s){ return s.replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
 
-  /* nav */
   var nav = document.getElementById('nav');
-  window.addEventListener('scroll', function(){ nav.classList.toggle('scrolled', window.scrollY > 8); }, {passive:true});
+  window.addEventListener('scroll', function(){ nav.classList.toggle('scrolled', window.scrollY > 10); }, {passive:true});
   var mb = document.getElementById('menuBtn'), mm = document.getElementById('mobileMenu');
   mb.addEventListener('click', function(){
     var open = mm.classList.toggle('open');
@@ -662,7 +716,6 @@ button,input,select,textarea{font:inherit;color:inherit}
   });
   mm.addEventListener('click', function(e){ if(e.target.tagName==='A'){ mm.classList.remove('open'); mb.setAttribute('aria-expanded','false'); } });
 
-  /* certificate */
   var TYPES = {
     pvt:{suffix:' Private Limited', label:'Private Limited Company'},
     llp:{suffix:' LLP', label:'Limited Liability Partnership'},
@@ -674,16 +727,13 @@ button,input,select,textarea{font:inherit;color:inherit}
       typeEl = document.getElementById('certType'), stamp = document.getElementById('stamp'),
       wrap = document.getElementById('certWrap'), caret = document.getElementById('caret'),
       input = document.getElementById('tryName'), chips = document.querySelectorAll('.chip');
-  var curType = 'pvt', userMode = false, demoTimer = null, typeTimer = null, stampTimer = null;
-
+  var userMode = false, demoTimer = null, typeTimer = null, stampTimer = null, di = 0;
   function fit(){
-    // shrink long names to fit the certificate line
     var full = nameEl.textContent + sufEl.textContent;
-    var size = full.length > 30 ? 20 : full.length > 24 ? 24 : 30;
-    nameEl.parentNode.style.fontSize = size + 'px';
+    nameEl.parentNode.style.fontSize = (full.length > 30 ? 20 : full.length > 24 ? 24 : 30) + 'px';
   }
   function setType(t){
-    curType = t; sufEl.textContent = TYPES[t].suffix; typeEl.textContent = TYPES[t].label;
+    sufEl.textContent = TYPES[t].suffix; typeEl.textContent = TYPES[t].label;
     chips.forEach(function(c){ c.setAttribute('aria-pressed', c.dataset.type === t); });
     fit();
   }
@@ -695,7 +745,7 @@ button,input,select,textarea{font:inherit;color:inherit}
   function clearStamp(){ stamp.classList.remove('hit'); wrap.classList.remove('shake'); }
   function typeOut(text, t, done){
     clearTimeout(typeTimer); clearStamp(); setType(t);
-    if(reduce){ nameEl.textContent = text; fit(); hitStamp(); done && done(); return; }
+    if(reduce){ nameEl.textContent = text; fit(); caret.style.display='none'; hitStamp(); done && done(); return; }
     var i = 0; nameEl.textContent = ''; caret.style.display = '';
     (function step(){
       nameEl.textContent = text.slice(0, i); fit();
@@ -703,15 +753,12 @@ button,input,select,textarea{font:inherit;color:inherit}
       else { caret.style.display = 'none'; stampTimer = setTimeout(function(){ hitStamp(); done && done(); }, 260); }
     })();
   }
-  var di = 0;
   function runDemo(){
     if(userMode) return;
     var d = demo[di % demo.length]; di++;
     typeOut(d[0], d[1], function(){ demoTimer = setTimeout(runDemo, 2600); });
   }
-  function startUser(){
-    userMode = true; clearTimeout(demoTimer); clearTimeout(typeTimer); clearTimeout(stampTimer);
-  }
+  function startUser(){ userMode = true; clearTimeout(demoTimer); clearTimeout(typeTimer); clearTimeout(stampTimer); }
   input.addEventListener('input', function(){
     startUser(); clearStamp(); caret.style.display = '';
     var v = input.value.trim();
@@ -723,67 +770,63 @@ button,input,select,textarea{font:inherit;color:inherit}
     if(!userMode){ startUser(); nameEl.textContent = demo[(di-1+demo.length)%demo.length][0]; }
     setType(c.dataset.type); caret.style.display='none'; hitStamp();
   }); });
-  // start demo when visible
   var started = false;
-  new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting && !started){ started = true; runDemo(); } }); }, {threshold:.3}).observe(wrap);
+  new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting && !started){ started = true; setTimeout(runDemo, reduce ? 0 : 700); } }); }, {threshold:.3}).observe(wrap);
 
-  /* counters */
   var counted = false;
-  var proof = document.querySelector('.proof');
   new IntersectionObserver(function(es){
     es.forEach(function(e){
       if(!e.isIntersecting || counted) return; counted = true;
       if(reduce) return;
       document.querySelectorAll('[data-count]').forEach(function(el){
         var to = parseFloat(el.dataset.count), dec = +(el.dataset.dec||0), suf = el.dataset.suffix||'', t0 = null;
-        function f(ts){ if(!t0) t0 = ts; var p = Math.min(1,(ts-t0)/1400), k = 1-Math.pow(1-p,3), v = to*k;
+        function f(ts){ if(!t0) t0 = ts; var p = Math.min(1,(ts-t0)/1500), k = 1-Math.pow(1-p,3), v = to*k;
           el.textContent = (dec ? v.toFixed(dec) : Math.round(v).toLocaleString('en-IN')) + suf;
           if(p<1) requestAnimationFrame(f); }
         requestAnimationFrame(f);
       });
     });
-  }, {threshold:.4}).observe(proof);
+  }, {threshold:.4}).observe(document.querySelector('.proof'));
 
-  /* services */
   var CATS = [
-    {id:'reg', name:'Register', title:'Register your business', blurb:'Choose the right structure and get registered, with drafting, filing and follow-up handled for you.', items:[
+    {id:'reg', c:'#1A8BC4', name:'Register', title:'Register your business', blurb:'Choose the right structure and get registered, with drafting, filing and follow-up handled for you.', items:[
       ['Private Limited Company','Limited liability company for startups and growing businesses.'],
       ['LLP Registration','Flexible partnership structure with limited liability.'],
       ['One Person Company','A company structure for a sole founder.'],
       ['Partnership Firm','Partnership deed drafting and firm registration.'],
       ['Sole Proprietorship','The quickest way to formalise a small business.'],
       ['Section 8 Company and NGO','Non-profit company, trust and society registrations.']]},
-    {id:'comp', name:'Stay compliant', title:'Stay compliant every year', blurb:'Annual and event-based filings, bookkeeping and MCA changes, tracked so you never miss a due date.', items:[
+    {id:'comp', c:'#2E9E4C', name:'Stay compliant', title:'Stay compliant every year', blurb:'Annual and event-based filings, bookkeeping and MCA changes, tracked so you never miss a due date.', items:[
       ['Annual Compliance','ROC filings for Private Limited companies, LLPs and firms.'],
       ['Bookkeeping and Accounting','Regular bookkeeping and accounting by qualified professionals.'],
       ['MCA Services','Director changes, registered office, auditor appointment and more.'],
       ['Event-based Compliance','Share issue, share transfer, increase in authorised capital.']]},
-    {id:'ipr', name:'Protect your brand', title:'Protect what you build', blurb:'Secure your brand name, creative work and inventions before someone else does.', items:[
+    {id:'ipr', c:'#7356D6', name:'Protect your brand', title:'Protect what you build', blurb:'Secure your brand name, creative work and inventions before someone else does.', items:[
       ['Trademark Registration','Search, filing, objection reply and renewal.'],
       ['Copyright Registration','Protect your creative and software works.'],
       ['Patent and Design','Registration support for inventions and designs.']]},
-    {id:'tax', name:'Tax and returns', title:'File tax and returns on time', blurb:'GST, income tax, TDS and PF returns prepared and filed by our tax team.', items:[
+    {id:'tax', c:'#D98A06', name:'Tax and returns', title:'File tax and returns on time', blurb:'GST, income tax, TDS and PF returns prepared and filed by our tax team.', items:[
       ['GST Registration and Returns','Registration, monthly returns and annual return.'],
       ['Income Tax Filing','ITR filing for individuals, firms and companies.'],
       ['TDS and PF Returns','Periodic statutory return filing.']]},
-    {id:'lic', name:'Licences', title:'Get the licences you need', blurb:'Food, quality and MSME registrations so you can operate and sell without hold-ups.', items:[
+    {id:'lic', c:'#D61F42', name:'Licences', title:'Get the licences you need', blurb:'Food, quality and MSME registrations so you can operate and sell without hold-ups.', items:[
       ['FSSAI Registration','Basic, state and central food licences.'],
       ['BIS and ISO','BIS registration and ISO certifications.'],
       ['MSME and Trade Licence','MSME registration, shop and establishment, trade licence.']]},
-    {id:'shr', name:'Recover shares', title:'Recover old physical shares', blurb:'Trace forgotten holdings and get them transferred to the rightful owner.', items:[
+    {id:'shr', c:'#16948A', name:'Recover shares', title:'Recover old physical shares', blurb:'Trace forgotten holdings and get them transferred to the rightful owner.', items:[
       ['Recovery of Physical Shares','Tracing and recovering physical share certificates and unclaimed holdings.'],
       ['Transmission and Transposition','Documentation and liaison with companies and registrars.'],
       ['IEPF Claims','Support with claims for shares and dividends held at the IEPF.']]}
   ];
   var tabs = document.getElementById('tabs'), panel = document.getElementById('panel');
-  function esc(s){ return s.replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
   CATS.forEach(function(c, i){
     var b = document.createElement('button');
     b.className = 'tab'; b.setAttribute('role','tab'); b.id = 'tab-' + c.id; b.setAttribute('aria-controls','panel');
-    b.innerHTML = '<span class="ico"><svg aria-hidden="true"><use href="#c-' + c.id + '"/></svg></span>' + esc(c.name) + '<span class="count">' + c.items.length + '</span>';
+    b.style.setProperty('--c', c.c);
+    b.innerHTML = '<span class="ico"><svg aria-hidden="true"><use href="#c-' + c.id + '"/></svg></span>' + esc(c.name);
     b.addEventListener('click', function(){ select(i, true); });
     b.addEventListener('keydown', function(e){
-      var n = e.key === 'ArrowDown' || e.key === 'ArrowRight' ? 1 : e.key === 'ArrowUp' || e.key === 'ArrowLeft' ? -1 : 0;
+      var n = e.key === 'ArrowRight' || e.key === 'ArrowDown' ? 1 : e.key === 'ArrowLeft' || e.key === 'ArrowUp' ? -1 : 0;
       if(n){ e.preventDefault(); select((i + n + CATS.length) % CATS.length, true, true); }
     });
     tabs.appendChild(b);
@@ -792,36 +835,35 @@ button,input,select,textarea{font:inherit;color:inherit}
     var c = CATS[i];
     tabs.querySelectorAll('.tab').forEach(function(t, j){ t.setAttribute('aria-selected', j===i); t.tabIndex = j===i ? 0 : -1; });
     if(focus) tabs.children[i].focus();
-    if(user && window.innerWidth <= 1024) tabs.children[i].scrollIntoView({inline:'center', block:'nearest', behavior: reduce ? 'auto' : 'smooth'});
+    if(user && tabs.scrollWidth > tabs.clientWidth){
+      var t = tabs.children[i]; tabs.scrollTo({left: t.offsetLeft - (tabs.clientWidth - t.offsetWidth)/2, behavior: reduce ? 'auto' : 'smooth'});
+    }
+    panel.style.setProperty('--c', c.c);
     panel.setAttribute('aria-labelledby', 'tab-' + c.id);
-    panel.innerHTML = '<div class="panel-body"><div class="panel-top"><div><h3>' + esc(c.title) + '</h3><p>' + esc(c.blurb) + '</p></div>' +
-      '<svg class="panel-art" aria-hidden="true"><use href="#c-' + c.id + '"/></svg></div><div class="svc-list">' +
-      c.items.map(function(it){ return '<a class="svc" target="_blank" rel="noopener" href="' + waLink('Hello Muds, I would like to know more about ' + it[0] + '.') + '"><strong>' + esc(it[0]) + '</strong><span>' + esc(it[1]) + '</span><em>Ask about this on WhatsApp</em></a>'; }).join('') +
+    panel.innerHTML = '<div class="panel-glow"></div><div class="panel-body"><div class="panel-intro"><div class="panel-art"><svg aria-hidden="true"><use href="#c-' + c.id + '"/></svg></div>' +
+      '<h3>' + esc(c.title) + '</h3><p>' + esc(c.blurb) + '</p>' +
+      '<a class="btn btn-ink" target="_blank" rel="noopener" href="' + waLink('Hello Muds, I need help with: ' + c.title + '.') + '">Talk to an expert</a></div>' +
+      '<div class="svc-list">' + c.items.map(function(it){ return '<a class="svc" target="_blank" rel="noopener" href="' + waLink('Hello Muds, I would like to know more about ' + it[0] + '.') + '"><strong>' + esc(it[0]) + '</strong><span>' + esc(it[1]) + '</span><em>Ask about this on WhatsApp</em></a>'; }).join('') +
       '</div></div>';
   }
   select(0);
 
-  /* footer service links */
-  [['fl-reg',0],['fl-comp',1],['fl-ipr',2]].forEach(function(p){
-    var ul = document.getElementById(p[0]);
-    var items = p[1]===2 ? CATS[2].items.concat(CATS[4].items.slice(0,1)) : p[1]===1 ? CATS[1].items.slice(0,2).concat(CATS[3].items.slice(0,2)) : CATS[0].items.slice(0,5);
-    ul.innerHTML = items.map(function(it){ return '<li><a target="_blank" rel="noopener" href="' + waLink('Hello Muds, I would like to know more about ' + it[0] + '.') + '">' + esc(it[0]) + '</a></li>'; }).join('');
+  [['fl-reg',CATS[0].items.slice(0,5)],['fl-comp',CATS[1].items.slice(0,2).concat(CATS[3].items.slice(0,2))],['fl-ipr',CATS[2].items.concat(CATS[4].items.slice(0,1))]].forEach(function(p){
+    document.getElementById(p[0]).innerHTML = p[1].map(function(it){ return '<li><a target="_blank" rel="noopener" href="' + waLink('Hello Muds, I would like to know more about ' + it[0] + '.') + '">' + esc(it[0]) + '</a></li>'; }).join('');
   });
 
-  /* process progress line */
   var track = document.getElementById('track'), fill = document.getElementById('trackFill'), steps = document.querySelectorAll('.step');
   function prog(){
     var r = track.getBoundingClientRect(), vh = window.innerHeight;
-    var p = Math.max(0, Math.min(1, (vh*0.75 - r.top) / (r.height + vh*0.1)));
+    var p = Math.max(0, Math.min(1, (vh*0.72 - r.top) / (r.height*0.6)));
     fill.style.width = (p*100) + '%';
     steps.forEach(function(s, i){
-      var on = window.innerWidth > 1024 ? p >= i/ (steps.length-1) - 0.001 : s.getBoundingClientRect().top < vh*0.7;
+      var on = window.innerWidth > 1024 ? p >= i/(steps.length-1) - 0.001 : s.getBoundingClientRect().top < vh*0.72;
       s.classList.toggle('on', on);
     });
   }
   window.addEventListener('scroll', prog, {passive:true}); window.addEventListener('resize', prog); prog();
 
-  /* lead form */
   var form = document.getElementById('leadForm'), err = document.getElementById('fErr');
   form.addEventListener('submit', function(e){
     e.preventDefault();
@@ -835,7 +877,7 @@ button,input,select,textarea{font:inherit;color:inherit}
     var url = waLink(msg), w = null;
     try { w = window.open(url, '_blank'); } catch(x) {}
     var go = document.getElementById('fGo'); go.href = url; go.hidden = false;
-    if(!w){ go.focus(); }
+    if(!w) go.focus();
   });
 })();
 </script>
