@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Muds – Company Registration, Compliance and Legal Services in Gurgaon</title>
 <meta name="description" content="Company registration, compliance, tax and legal services by one team of Chartered Accountants, Company Secretaries and Advocates. Serving businesses since 2013.">
+<link rel="icon" type="image/png" href="muds-logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Mukta:wght@400;500;600;700&display=swap">
@@ -58,6 +59,10 @@ button,input,select,textarea{font:inherit;color:inherit}
 .nav-in{display:flex;align-items:center;justify-content:space-between;gap:24px;height:76px}
 .logo{display:flex;align-items:center;gap:12px;text-decoration:none;font-family:var(--display);font-weight:800;font-size:24px;letter-spacing:-0.02em}
 .logo-mark{width:38px;height:38px;flex:none}
+.logo-img{height:60px;width:auto;flex:none}
+.logo-tile{display:flex;background:#fff;border-radius:16px;padding:8px;flex:none}
+.logo-tile img{height:76px;width:auto}
+.logo-txt{font-size:19px;line-height:1.1}
 .logo small{display:block;font-family:var(--body);font-weight:500;font-size:13px;letter-spacing:0;color:var(--muted);line-height:1}
 .nav-links{display:flex;gap:30px;font-weight:600;font-size:16px}
 .nav-links a{text-decoration:none;color:var(--muted);padding:8px 0}
@@ -285,6 +290,8 @@ button,input,select,textarea{font:inherit;color:inherit}
   .hero-sub{font-size:18px}
   .hero-actions .btn{flex:1 1 100%}
   .nav-cta .btn-primary{display:none}
+  .nav .logo-txt{display:none}
+  .logo-img{height:54px}
   .cert .name{font-size:28px}
   .proof-in{grid-template-columns:1fr 1fr}
   .proof-item{padding:22px 16px;border-left:0;border-top:1px solid rgba(255,255,255,.1)}
@@ -342,9 +349,9 @@ button,input,select,textarea{font:inherit;color:inherit}
 
 <header class="nav" id="nav">
   <div class="wrap nav-in">
-    <a class="logo" href="#top" aria-label="Muds home">
-      <svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="none" stroke="#5B3FD0" stroke-width="2.5"/><circle cx="20" cy="20" r="13" fill="#0E2240"/><path d="M13.5 25V15l6.5 6 6.5-6v10" fill="none" stroke="#F29A1F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      <span>Muds<small>Assets Distribution</small></span>
+    <a class="logo" href="#top" aria-label="Muds Assets Distribution, home">
+      <img class="logo-img" src="muds-logo.png" alt="" width="62" height="60">
+      <span class="logo-txt">Muds Assets<small>Distribution</small></span>
     </a>
     <nav class="nav-links" aria-label="Main">
       <a href="#services">Services</a>
@@ -617,7 +624,7 @@ button,input,select,textarea{font:inherit;color:inherit}
   <div class="wrap">
     <div class="foot-grid">
       <div>
-        <a class="logo" href="#top"><svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="none" stroke="#8C78F0" stroke-width="2.5"/><circle cx="20" cy="20" r="13" fill="#16325A"/><path d="M13.5 25V15l6.5 6 6.5-6v10" fill="none" stroke="#F29A1F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Muds<small>Assets Distribution</small></span></a>
+        <a class="logo" href="#top" aria-label="Muds Assets Distribution, back to top"><span class="logo-tile"><img src="muds-logo.png" alt="" width="84" height="81"></span><span class="logo-txt">Muds Assets<small>Distribution</small></span></a>
         <address>IDC-31b, Sector-16, Main MG Road<br>Gurgaon, Haryana 122007<br>
           <a href="tel:+911141182222">Office: +91-11-41182222</a><br>
           <a href="tel:+919599653306">Phone: +91 95996 53306</a><br>
