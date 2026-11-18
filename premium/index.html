@@ -1,0 +1,831 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Muds – Company Registration, Compliance and Legal Services in Gurgaon</title>
+<meta name="description" content="Company registration, compliance, tax and legal services by one team of Chartered Accountants, Company Secretaries and Advocates. Serving businesses since 2013.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Mukta:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  --ink:#0E2240;
+  --ink-2:#16325A;
+  --paper:#F4F6FA;
+  --white:#FFFFFF;
+  --stamp:#5B3FD0;
+  --marigold:#F29A1F;
+  --text:#0E2240;
+  --muted:#4A5A73;
+  --line:#DCE2EC;
+  --on-ink:#E8EDF5;
+  --on-ink-muted:#A9B7CC;
+  --wa:#0F7A3A;
+  --display:'Bricolage Grotesque',system-ui,sans-serif;
+  --body:'Mukta',system-ui,sans-serif;
+  --wrap:1200px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--body);font-size:18px;line-height:1.6;color:var(--text);background:var(--white);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);margin:0;line-height:1.05;letter-spacing:-0.02em}
+p{margin:0}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--marigold);outline-offset:3px;border-radius:6px}
+.wrap{width:100%;max-width:var(--wrap);margin:0 auto;padding:0 32px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:#fff;padding:10px 16px;border-radius:8px;z-index:200}
+.skip:focus{left:8px}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;border-radius:14px;border:0;font-family:var(--body);font-weight:700;font-size:17px;text-decoration:none;cursor:pointer;transition:transform .15s ease,background .2s ease}
+.btn:active{transform:translateY(1px)}
+.btn-primary{background:var(--marigold);color:var(--ink)}
+.btn-primary:hover{background:#FFAE3D}
+.btn-ink{background:var(--ink);color:#fff}
+.btn-ink:hover{background:var(--ink-2)}
+.btn-ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 2px var(--ink)}
+.btn-ghost:hover{background:rgba(14,34,64,.06)}
+.btn-wa{background:var(--wa);color:#fff}
+.btn-wa:hover{background:#0B6630}
+.btn svg{width:20px;height:20px;flex:none}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.88);backdrop-filter:saturate(1.4) blur(12px);-webkit-backdrop-filter:saturate(1.4) blur(12px);border-bottom:1px solid transparent;transition:border-color .2s}
+.nav.scrolled{border-bottom-color:var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;gap:24px;height:76px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;font-family:var(--display);font-weight:800;font-size:24px;letter-spacing:-0.02em}
+.logo-mark{width:38px;height:38px;flex:none}
+.logo small{display:block;font-family:var(--body);font-weight:500;font-size:13px;letter-spacing:0;color:var(--muted);line-height:1}
+.nav-links{display:flex;gap:30px;font-weight:600;font-size:16px}
+.nav-links a{text-decoration:none;color:var(--muted);padding:8px 0}
+.nav-links a:hover{color:var(--ink)}
+.nav-cta{display:flex;gap:10px;align-items:center}
+.nav-cta .btn{min-height:46px;font-size:16px;padding:0 20px;border-radius:12px}
+.menu-btn{display:none;width:46px;height:46px;border-radius:12px;border:0;background:var(--paper);cursor:pointer;align-items:center;justify-content:center}
+.menu-btn svg{width:22px;height:22px}
+.mobile-menu{display:none}
+
+/* hero */
+.hero{position:relative;background:var(--paper);overflow:hidden;padding:72px 0 0}
+.hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(14,34,64,.045) 1px,transparent 1px);background-size:100% 34px;mask-image:linear-gradient(180deg,#000 40%,transparent);-webkit-mask-image:linear-gradient(180deg,#000 40%,transparent);pointer-events:none}
+.hero-grid{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.hero h1{font-size:clamp(46px,6.4vw,88px);font-weight:800;letter-spacing:-0.035em;line-height:.98;max-width:12ch}
+.hero-sub{margin-top:26px;font-size:20px;line-height:1.6;color:var(--muted);max-width:52ch}
+.hero-actions{margin-top:34px;display:flex;flex-wrap:wrap;gap:14px}
+.hero-note{margin-top:18px;font-size:15px;color:var(--muted)}
+
+/* certificate stage */
+.stage{position:relative;padding:20px 0 60px}
+.cert-wrap{position:relative;transform:rotate(-2.2deg);filter:drop-shadow(0 30px 40px rgba(14,34,64,.18)) drop-shadow(0 6px 10px rgba(14,34,64,.08))}
+.cert{width:100%;height:auto}
+.cert .name{font-family:var(--display);font-weight:800;font-size:30px;letter-spacing:-0.02em;fill:var(--ink)}
+.cert .lbl{font-family:var(--body);font-size:13px;fill:#6B7A90}
+.cert .val{font-family:var(--body);font-weight:600;font-size:17px;fill:var(--ink)}
+.cert .ttl{font-family:var(--display);font-weight:700;font-size:15px;letter-spacing:.32em;fill:var(--ink)}
+.cert .big{font-family:var(--display);font-weight:800;font-size:36px;letter-spacing:-0.02em;fill:var(--ink)}
+.caret{animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.stamp{transform-box:fill-box;transform-origin:center;opacity:0}
+.stamp.hit{animation:stamp .62s cubic-bezier(.2,.9,.25,1.25) forwards}
+@keyframes stamp{0%{opacity:0;transform:scale(1.9) rotate(-28deg)}55%{opacity:.95;transform:scale(.94) rotate(-14deg)}75%{transform:scale(1.03) rotate(-15deg)}100%{opacity:.9;transform:scale(1) rotate(-15deg)}}
+.cert-wrap.shake{animation:shake .32s ease .28s}
+@keyframes shake{0%,100%{transform:rotate(-2.2deg) translate(0,0)}30%{transform:rotate(-2.2deg) translate(0,4px)}60%{transform:rotate(-2.2deg) translate(0,-1px)}}
+.try{position:relative;margin:34px auto 0;max-width:470px;background:var(--white);border-radius:18px;padding:16px;box-shadow:0 1px 0 var(--line),0 14px 30px rgba(14,34,64,.08)}
+.try label{display:block;font-weight:700;font-size:15px;margin:0 4px 8px}
+.try-row{display:flex;gap:8px}
+.try input{flex:1;min-width:0;height:48px;border-radius:12px;border:2px solid var(--line);padding:0 14px;font-size:17px;background:var(--paper)}
+.try input:focus{border-color:var(--ink);outline:none;background:#fff}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.chip{min-height:40px;padding:0 14px;border-radius:999px;border:2px solid var(--line);background:#fff;font-weight:600;font-size:15px;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:#fff}
+
+/* proof strip */
+.proof{position:relative;background:var(--ink);color:var(--on-ink)}
+.proof-in{display:grid;grid-template-columns:repeat(5,1fr);gap:0}
+.proof-item{padding:30px 24px;border-left:1px solid rgba(255,255,255,.1)}
+.proof-item:first-child{border-left:0;padding-left:0}
+.proof-num{font-family:var(--display);font-weight:800;font-size:40px;letter-spacing:-0.02em;color:#fff;line-height:1;display:flex;align-items:center;gap:8px}
+.proof-num svg{width:22px;height:22px}
+.proof-lbl{margin-top:8px;font-size:15px;color:var(--on-ink-muted)}
+
+/* section basics */
+.sec{padding:120px 0}
+.sec-head{max-width:760px;margin-bottom:56px}
+.sec-head h2{font-size:clamp(36px,4.6vw,60px);font-weight:800;letter-spacing:-0.03em}
+.sec-head p{margin-top:18px;font-size:20px;color:var(--muted);max-width:56ch}
+
+/* services picker */
+.picker{display:grid;grid-template-columns:320px 1fr;gap:32px;align-items:start}
+.tabs{display:flex;flex-direction:column;gap:6px;position:sticky;top:100px}
+.tab{display:flex;align-items:center;gap:14px;width:100%;text-align:left;min-height:64px;padding:12px 16px;border-radius:16px;border:0;background:transparent;cursor:pointer;font-family:var(--display);font-weight:700;font-size:21px;letter-spacing:-0.01em;color:var(--muted);transition:background .2s,color .2s}
+.tab:hover{background:var(--paper);color:var(--ink)}
+.tab[aria-selected="true"]{background:var(--ink);color:#fff}
+.tab .ico{width:38px;height:38px;flex:none;border-radius:11px;display:flex;align-items:center;justify-content:center;background:rgba(14,34,64,.07)}
+.tab[aria-selected="true"] .ico{background:rgba(255,255,255,.12)}
+.tab .ico svg{width:22px;height:22px}
+.tab .count{margin-left:auto;font-family:var(--body);font-size:14px;font-weight:600;opacity:.7}
+.panel{background:var(--paper);border-radius:28px;padding:40px;min-height:520px;position:relative;overflow:hidden}
+.panel-top{display:flex;justify-content:space-between;gap:24px;align-items:flex-start;margin-bottom:28px}
+.panel h3{font-size:36px;font-weight:800;letter-spacing:-0.025em}
+.panel-top p{margin-top:10px;color:var(--muted);max-width:44ch}
+.panel-art{width:120px;height:120px;flex:none;color:var(--stamp)}
+.svc-list{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.svc{display:flex;flex-direction:column;gap:6px;background:#fff;border-radius:18px;padding:22px 22px 18px;text-decoration:none;border:1px solid var(--line);transition:border-color .2s,transform .2s}
+.svc:hover{border-color:var(--ink);transform:translateY(-2px)}
+.svc strong{font-family:var(--display);font-size:20px;font-weight:700;letter-spacing:-0.01em}
+.svc span{font-size:16px;color:var(--muted);line-height:1.5}
+.svc em{margin-top:auto;padding-top:10px;font-style:normal;font-weight:700;font-size:15px;color:var(--stamp)}
+.panel-body{animation:panelIn .35s ease}
+@keyframes panelIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+/* process */
+.process{background:var(--ink);color:var(--on-ink);position:relative;overflow:hidden}
+.process .sec-head h2{color:#fff}
+.process .sec-head p{color:var(--on-ink-muted)}
+.track{position:relative}
+.track-line{position:absolute;left:0;right:0;top:27px;height:3px;background:rgba(255,255,255,.12);border-radius:3px}
+.track-fill{position:absolute;left:0;top:0;bottom:0;width:0;background:var(--marigold);border-radius:3px;transition:width .1s linear}
+.steps{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:28px;list-style:none;margin:0;padding:0}
+.step-dot{width:56px;height:56px;border-radius:50%;background:var(--ink);box-shadow:inset 0 0 0 3px rgba(255,255,255,.18);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:800;font-size:22px;color:#fff;transition:background .3s,box-shadow .3s,color .3s}
+.step.on .step-dot{background:var(--marigold);box-shadow:none;color:var(--ink)}
+.step h3{margin-top:26px;font-size:25px;font-weight:700;color:#fff;letter-spacing:-0.015em;line-height:1.15}
+.step p{margin-top:12px;font-size:17px;color:var(--on-ink-muted)}
+.mini{margin-top:22px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:14px;display:flex;flex-direction:column;gap:8px}
+.mini-row{display:flex;justify-content:space-between;gap:10px;font-size:14px;padding:8px 10px;border-radius:10px;background:rgba(255,255,255,.05)}
+.mini-row b{color:#fff;font-weight:600}
+.mini-row span{color:var(--on-ink-muted)}
+.process-cta{margin-top:56px;display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.process-cta p{color:var(--on-ink-muted);font-size:17px}
+
+/* compare */
+.compare{display:grid;grid-template-columns:.85fr 1.15fr;gap:24px;align-items:stretch}
+.col{border-radius:28px;padding:40px}
+.col h3{font-size:26px;font-weight:700;letter-spacing:-0.015em}
+.col ul{list-style:none;margin:24px 0 0;padding:0}
+.col li{display:flex;gap:14px;align-items:flex-start;padding:16px 0;border-top:1px solid var(--line);font-size:17px}
+.col li svg{width:22px;height:22px;flex:none;margin-top:3px}
+.col-them{background:var(--paper);color:var(--muted)}
+.col-them h3{color:var(--muted)}
+.col-us{background:var(--white);box-shadow:inset 0 0 0 2px var(--ink)}
+.col-us li svg{color:var(--wa)}
+
+/* desks */
+.desks{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:2px solid var(--ink)}
+.desk{padding:30px 28px 32px 0;border-bottom:1px solid var(--line)}
+.desk:not(:nth-child(3n+1)){padding-left:28px;border-left:1px solid var(--line)}
+.desk h3{font-size:23px;font-weight:700;letter-spacing:-0.015em;display:flex;align-items:center;gap:12px}
+.desk h3 svg{width:26px;height:26px;color:var(--stamp);flex:none}
+.desk p{margin-top:10px;color:var(--muted);font-size:17px}
+
+/* learn */
+.learn{background:var(--paper)}
+.learn-card{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.learn-card h2{font-size:clamp(34px,4.2vw,54px);font-weight:800;letter-spacing:-0.03em}
+.learn-card p{margin-top:16px;font-size:19px;color:var(--muted);max-width:48ch}
+.learn-card .btn{margin-top:28px}
+.player{position:relative;display:block;aspect-ratio:16/10;border-radius:26px;background:var(--ink);overflow:hidden;text-decoration:none;color:#fff}
+.player svg.bg{position:absolute;inset:0;width:100%;height:100%}
+.player .play{position:absolute;left:50%;top:50%;width:92px;height:92px;margin:-46px 0 0 -46px;border-radius:50%;background:var(--marigold);display:flex;align-items:center;justify-content:center;transition:transform .25s}
+.player:hover .play{transform:scale(1.08)}
+.player .play svg{width:34px;height:34px;color:var(--ink);margin-left:5px}
+.player .cap{position:absolute;left:26px;bottom:22px;right:26px;font-family:var(--display);font-weight:700;font-size:22px;letter-spacing:-0.01em}
+.player .cap small{display:block;font-family:var(--body);font-weight:500;font-size:15px;color:var(--on-ink-muted);letter-spacing:0}
+
+/* faq */
+.faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px}
+.faq details{border-top:1px solid var(--line)}
+.faq details:last-child{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:24px 0;font-family:var(--display);font-weight:700;font-size:22px;letter-spacing:-0.01em}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary .pm{width:36px;height:36px;flex:none;border-radius:50%;background:var(--paper);display:flex;align-items:center;justify-content:center;transition:transform .25s,background .2s}
+.faq summary .pm svg{width:18px;height:18px}
+.faq details[open] summary .pm{transform:rotate(45deg);background:var(--marigold)}
+.faq .ans{padding:0 56px 26px 0;color:var(--muted);font-size:18px}
+
+/* contact */
+.contact{background:var(--ink);color:var(--on-ink);position:relative;overflow:hidden}
+.contact-grid{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.contact h2{font-size:clamp(40px,5vw,68px);font-weight:800;letter-spacing:-0.035em;color:#fff;max-width:11ch}
+.contact .lead{margin-top:20px;font-size:20px;color:var(--on-ink-muted);max-width:44ch}
+.channels{margin-top:40px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.channel{display:flex;flex-direction:column;gap:2px;padding:18px 20px;border-radius:18px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);text-decoration:none;transition:background .2s}
+.channel:hover{background:rgba(255,255,255,.1)}
+.channel span{font-size:14px;color:var(--on-ink-muted)}
+.channel b{font-size:18px;color:#fff;font-weight:600;word-break:break-word}
+.form{background:#fff;color:var(--text);border-radius:28px;padding:36px;display:flex;flex-direction:column;gap:16px}
+.form h3{font-size:30px;font-weight:800;letter-spacing:-0.025em}
+.form p.hint{font-size:15px;color:var(--muted);margin-top:-6px}
+.field{display:flex;flex-direction:column;gap:6px}
+.field label{font-weight:700;font-size:15px}
+.field input,.field select,.field textarea{min-height:52px;border-radius:12px;border:2px solid var(--line);padding:12px 14px;font-size:17px;background:var(--paper);width:100%}
+.field textarea{resize:vertical;min-height:96px}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--ink);background:#fff}
+.form .btn{width:100%;margin-top:4px}
+.form small{font-size:14px;color:var(--muted);line-height:1.5}
+.err{color:#B3261E;font-size:14px;font-weight:600;min-height:0}
+
+/* footer */
+.foot{background:#08172C;color:#B9C6D8;padding:72px 0 36px;font-size:16px}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px}
+.foot .logo{color:#fff}
+.foot .logo small{color:#8DA2BB}
+.foot address{font-style:normal;margin-top:18px;line-height:1.7}
+.foot h4{margin:0 0 12px;font-family:var(--display);font-size:17px;font-weight:700;color:#fff}
+.foot ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px}
+.foot a{text-decoration:none}
+.foot a:hover{color:#fff}
+.socials{display:flex;gap:10px;margin-top:22px}
+.socials a{width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;color:#fff;transition:background .2s}
+.socials a:hover{background:var(--marigold);color:var(--ink)}
+.socials svg{width:18px;height:18px}
+.foot-bottom{margin-top:56px;padding-top:24px;border-top:1px solid rgba(255,255,255,.08);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:14px;color:#8DA2BB}
+
+/* floating whatsapp */
+.fab{position:fixed;right:20px;bottom:20px;z-index:90;display:flex;align-items:center;gap:10px;background:var(--wa);color:#fff;text-decoration:none;font-weight:700;font-size:16px;min-height:56px;padding:0 22px 0 18px;border-radius:999px;box-shadow:0 10px 28px rgba(15,122,58,.35);transition:transform .2s}
+.fab:hover{transform:translateY(-2px)}
+.fab svg{width:24px;height:24px}
+
+/* reveal for counters only */
+@media (max-width:1024px){
+  .hero-grid{grid-template-columns:1fr;gap:20px}
+  .hero h1{max-width:14ch}
+  .stage{max-width:620px;margin:0 auto;width:100%}
+  .picker{grid-template-columns:1fr}
+  .tabs{position:static;flex-direction:row;overflow-x:auto;gap:8px;padding-bottom:6px;scrollbar-width:none}
+  .tabs::-webkit-scrollbar{display:none}
+  .tab{flex:none;width:auto;min-height:52px;font-size:17px;padding:8px 16px 8px 8px}
+  .tab .count{display:none}
+  .steps{grid-template-columns:1fr 1fr;row-gap:48px}
+  .track-line{display:none}
+  .compare,.learn-card,.faq-grid,.contact-grid{grid-template-columns:1fr}
+  .desks{grid-template-columns:1fr 1fr}
+  .desk:not(:nth-child(3n+1)){padding-left:0;border-left:0}
+  .desk:nth-child(2n){padding-left:24px;border-left:1px solid var(--line)}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .proof-in{grid-template-columns:repeat(3,1fr)}
+  .proof-item:nth-child(4){border-left:0;padding-left:0}
+}
+@media (max-width:860px){
+  .nav-links,.nav-cta .btn-ghost{display:none}
+  .menu-btn{display:flex}
+  .mobile-menu.open{display:flex;flex-direction:column;gap:4px;padding:8px 20px 20px;border-bottom:1px solid var(--line);background:#fff}
+  .mobile-menu a{padding:12px 4px;font-weight:600;text-decoration:none;font-size:18px;border-bottom:1px solid var(--line)}
+}
+@media (max-width:640px){
+  body{font-size:17px}
+  .wrap{padding:0 20px}
+  .sec{padding:80px 0}
+  .sec-head{margin-bottom:36px}
+  .sec-head p{font-size:18px}
+  .hero{padding-top:44px}
+  .hero-sub{font-size:18px}
+  .hero-actions .btn{flex:1 1 100%}
+  .nav-cta .btn-primary{display:none}
+  .cert .name{font-size:28px}
+  .proof-in{grid-template-columns:1fr 1fr}
+  .proof-item{padding:22px 16px;border-left:0;border-top:1px solid rgba(255,255,255,.1)}
+  .proof-item:nth-child(odd){padding-left:0}
+  .proof-item:nth-child(even){border-left:1px solid rgba(255,255,255,.1)}
+  .proof-item:nth-child(-n+2){border-top:0}
+  .proof-item:nth-child(4){padding-left:16px;border-left:1px solid rgba(255,255,255,.1)}
+  .proof-item:last-child{grid-column:1/-1;border-left:0;padding-left:0}
+  .proof-num{font-size:32px}
+  .panel{padding:24px;border-radius:22px;min-height:0}
+  .panel-art{display:none}
+  .panel h3{font-size:30px}
+  .svc-list{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr}
+  .col{padding:26px;border-radius:22px}
+  .desks{grid-template-columns:1fr}
+  .desk,.desk:nth-child(2n){padding:24px 0;border-left:0}
+  .faq summary{font-size:19px}
+  .faq .ans{padding-right:0}
+  .channels{grid-template-columns:1fr}
+  .form{padding:24px;border-radius:22px}
+  .foot-grid{grid-template-columns:1fr}
+  .fab span{display:none}
+  .fab{padding:0;width:58px;justify-content:center}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M18 6 6 18M6 6l12 12"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></symbol>
+    <symbol id="i-in" viewBox="0 0 24 24"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM10 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C21.6 8.65 22 11.2 22 14.5V21h-4v-5.8c0-1.4 0-3.2-1.95-3.2S13.8 13.5 13.8 15.1V21H10z"/></symbol>
+    <symbol id="i-fb" viewBox="0 0 24 24"><path fill="currentColor" d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.8c0-.9.3-1.6 1.6-1.6h1.7V4.4c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.3H7.4V14h2.7v8z"/></symbol>
+    <symbol id="i-xc" viewBox="0 0 24 24"><path fill="currentColor" d="M17.75 3h3.07l-6.7 7.66L22 21h-6.17l-4.83-6.32L5.47 21H2.4l7.17-8.2L2 3h6.33l4.37 5.77zm-1.08 16.2h1.7L7.4 4.73H5.58z"/></symbol>
+    <symbol id="i-yt" viewBox="0 0 24 24"><path fill="currentColor" d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.75 15.02V8.98L15.5 12z"/></symbol>
+    <!-- category icons -->
+    <symbol id="c-reg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V8l8-5 8 5v13"/><path d="M9 21v-6h6v6"/><path d="M3 21h18"/></g></symbol>
+    <symbol id="c-comp" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="17" rx="2"/><path d="M8 2v4M16 2v4M4 10h16"/><path d="m9 15 2 2 4-4"/></g></symbol>
+    <symbol id="c-ipr" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/><path d="M14.5 9.5a3 3 0 1 0 0 5"/></g></symbol>
+    <symbol id="c-tax" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"/><path d="M9 8h6M9 12h6M9 16h3"/></g></symbol>
+    <symbol id="c-lic" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="m8.5 14-1.5 7 5-3 5 3-1.5-7"/></g></symbol>
+    <symbol id="c-shr" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M7 9h6M7 13h10"/><circle cx="17" cy="9" r="1.2"/></g></symbol>
+  </defs>
+</svg>
+
+<header class="nav" id="nav">
+  <div class="wrap nav-in">
+    <a class="logo" href="#top" aria-label="Muds home">
+      <svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="none" stroke="#5B3FD0" stroke-width="2.5"/><circle cx="20" cy="20" r="13" fill="#0E2240"/><path d="M13.5 25V15l6.5 6 6.5-6v10" fill="none" stroke="#F29A1F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Muds<small>Assets Distribution</small></span>
+    </a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="#services">Services</a>
+      <a href="#process">How it works</a>
+      <a href="#why">Why Muds</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-ghost" href="tel:+919599653306"><svg aria-hidden="true"><use href="#i-phone"/></svg>Call us</a>
+      <a class="btn btn-primary" href="#contact">Free consultation</a>
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    </div>
+  </div>
+  <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile">
+    <a href="#services">Services</a>
+    <a href="#process">How it works</a>
+    <a href="#why">Why Muds</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main id="main">
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <h1>Start your company. Leave the filings to us.</h1>
+      <p class="hero-sub">Company registration, compliance, tax and legal work, handled by one team of Chartered Accountants, Company Secretaries and Advocates in Gurgaon. Serving businesses since 2013.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#contact">Book a free consultation</a>
+        <a class="btn btn-wa" href="https://wa.me/917042621771" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Chat on WhatsApp</a>
+      </div>
+      <p class="hero-note">Mon to Sat, 10 AM to 7 PM. Call <a href="tel:+919599653306" style="white-space:nowrap">+91 95996 53306</a>.</p>
+    </div>
+
+    <div class="stage">
+      <div class="cert-wrap" id="certWrap">
+        <svg class="cert" viewBox="0 0 560 400" role="img" aria-labelledby="certTitle">
+          <title id="certTitle">Illustration of a certificate of incorporation with the business name you type</title>
+          <defs>
+            <pattern id="guil" width="14" height="14" patternUnits="userSpaceOnUse">
+              <circle cx="7" cy="7" r="6" fill="none" stroke="#C9D2E3" stroke-width=".8"/>
+            </pattern>
+            <filter id="ink" x="-20%" y="-20%" width="140%" height="140%">
+              <feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="4" result="n"/>
+              <feColorMatrix in="n" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -1.6 1.25" result="m"/>
+              <feComposite in="SourceGraphic" in2="m" operator="in" result="c"/>
+              <feDisplacementMap in="c" in2="n" scale="2.4"/>
+            </filter>
+            <path id="ring" d="M 0,0 m -58,0 a 58,58 0 1,1 116,0 a 58,58 0 1,1 -116,0"/>
+          </defs>
+          <rect x="0" y="0" width="560" height="400" rx="10" fill="#FFFFFF"/>
+          <rect x="14" y="14" width="532" height="372" rx="6" fill="url(#guil)" opacity=".55"/>
+          <rect x="30" y="30" width="500" height="340" rx="4" fill="#FFFFFF" stroke="#0E2240" stroke-width="1.4"/>
+          <rect x="36" y="36" width="488" height="328" rx="3" fill="none" stroke="#C9D2E3" stroke-width="1"/>
+          <text class="ttl" x="280" y="78" text-anchor="middle">CERTIFICATE OF</text>
+          <text class="big" x="280" y="116" text-anchor="middle">Incorporation</text>
+          <line x1="200" y1="134" x2="360" y2="134" stroke="#F29A1F" stroke-width="3" stroke-linecap="round"/>
+          <text class="lbl" x="64" y="172">This is to certify that</text>
+          <text class="name" x="64" y="212"><tspan id="certName">Sharma Foods</tspan><tspan id="certSuffix"> Private Limited</tspan><tspan class="caret" id="caret" fill="#5B3FD0">|</tspan></text>
+          <line x1="64" y1="226" x2="496" y2="226" stroke="#C9D2E3" stroke-width="1"/>
+          <text class="lbl" x="64" y="262">Entity type</text>
+          <text class="val" x="64" y="286" id="certType">Private Limited Company</text>
+          <text class="lbl" x="64" y="322">Prepared by</text>
+          <text class="val" x="64" y="346">Muds Assets Distribution</text>
+          <g transform="translate(424 300)">
+            <g class="stamp" id="stamp" filter="url(#ink)">
+              <circle r="70" fill="none" stroke="#5B3FD0" stroke-width="5"/>
+              <circle r="47" fill="none" stroke="#5B3FD0" stroke-width="2.5"/>
+              <text font-family="Mukta,sans-serif" font-weight="700" font-size="11.5" letter-spacing="2.6" fill="#5B3FD0"><textPath href="#ring" startOffset="0">MUDS REGISTRATION DESK ✦ GURGAON ✦ SINCE 2013 ✦</textPath></text>
+              <rect x="-62" y="-15" width="124" height="30" rx="3" fill="#FFFFFF"/>
+              <rect x="-62" y="-15" width="124" height="30" rx="3" fill="none" stroke="#5B3FD0" stroke-width="3"/>
+              <text x="0" y="7" text-anchor="middle" font-family="Bricolage Grotesque,sans-serif" font-weight="800" font-size="19" letter-spacing="1.5" fill="#5B3FD0">REGISTERED</text>
+            </g>
+          </g>
+        </svg>
+      </div>
+
+      <form class="try" id="tryForm" onsubmit="return false">
+        <label for="tryName">See your business name on it</label>
+        <div class="try-row">
+          <input id="tryName" type="text" maxlength="28" placeholder="Type your business name" autocomplete="organization">
+        </div>
+        <div class="chips" role="group" aria-label="Entity type">
+          <button type="button" class="chip" data-type="pvt" aria-pressed="true">Private Limited</button>
+          <button type="button" class="chip" data-type="llp" aria-pressed="false">LLP</button>
+          <button type="button" class="chip" data-type="opc" aria-pressed="false">One Person Company</button>
+          <button type="button" class="chip" data-type="sec8" aria-pressed="false">Section 8</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- PROOF -->
+<section class="proof" aria-label="Muds in numbers">
+  <div class="wrap proof-in">
+    <div class="proof-item"><div class="proof-num"><svg aria-hidden="true" style="color:#F29A1F"><use href="#i-star"/></svg><span data-count="4.5" data-dec="1">4.5</span></div><div class="proof-lbl">Google rating, 1000+ reviews</div></div>
+    <div class="proof-item"><div class="proof-num"><svg aria-hidden="true" style="color:#00B67A"><use href="#i-star"/></svg><span data-count="4.1" data-dec="1">4.1</span></div><div class="proof-lbl">Trustpilot rating</div></div>
+    <div class="proof-item"><div class="proof-num"><span data-count="35000" data-suffix="+">35,000+</span></div><div class="proof-lbl">Clients served</div></div>
+    <div class="proof-item"><div class="proof-num"><span data-count="110" data-suffix="+">110+</span></div><div class="proof-lbl">CAs, CSs and Advocates</div></div>
+    <div class="proof-item"><div class="proof-num"><span>2013</span></div><div class="proof-lbl">Serving businesses since</div></div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="sec" id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>What does your business need right now?</h2>
+      <p>Pick where you are. Each service is handled end to end by the same team, so nothing falls between vendors.</p>
+    </div>
+    <div class="picker">
+      <div class="tabs" role="tablist" aria-label="Service categories" id="tabs"></div>
+      <div class="panel" role="tabpanel" id="panel" tabindex="0"></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="sec process" id="process">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>From first message to registered.</h2>
+      <p>Four steps, mostly online. You share details once and our team does the drafting, filing and follow-up.</p>
+    </div>
+    <div class="track" id="track">
+      <div class="track-line"><div class="track-fill" id="trackFill"></div></div>
+      <ol class="steps">
+        <li class="step"><div class="step-dot">1</div><h3>Tell us what you need</h3><p>Share your requirement online, by call or on WhatsApp. An expert reviews it and calls you back.</p>
+          <div class="mini" aria-hidden="true"><div class="mini-row"><span>Service</span><b>Private Limited</b></div><div class="mini-row"><span>Consultation</span><b>Free</b></div></div></li>
+        <li class="step"><div class="step-dot">2</div><h3>Share details and documents</h3><p>Add your business details and upload documents securely. We verify each one before filing.</p>
+          <div class="mini" aria-hidden="true"><div class="mini-row"><span>Name options</span><b>3 added</b></div><div class="mini-row"><span>Documents</span><b>Verified</b></div></div></li>
+        <li class="step"><div class="step-dot">3</div><h3>Confirm and pay</h3><p>Pay online once your quotation is confirmed. Our experts take the filing forward from here.</p>
+          <div class="mini" aria-hidden="true"><div class="mini-row"><span>Quotation</span><b>Confirmed</b></div><div class="mini-row"><span>Payment</span><b>Received</b></div></div></li>
+        <li class="step"><div class="step-dot">4</div><h3>Get confirmation and next steps</h3><p>Receive confirmation by email, then help with bank account, GST and ongoing compliance.</p>
+          <div class="mini" aria-hidden="true"><div class="mini-row"><span>Filing</span><b>Submitted</b></div><div class="mini-row"><span>Next</span><b>Expert call</b></div></div></li>
+      </ol>
+    </div>
+    <div class="process-cta">
+      <a class="btn btn-primary" href="#contact">Start your registration</a>
+      <p>Not sure which structure fits? The first consultation is free.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="sec" id="why">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>One firm instead of five vendors.</h2>
+      <p>Most portals file the form you ask for. We start with the right structure, then handle everything that follows.</p>
+    </div>
+    <div class="compare">
+      <div class="col col-them">
+        <h3>Typical online filing portals</h3>
+        <ul>
+          <li><svg aria-hidden="true"><use href="#i-x"/></svg>Focused mainly on registration and routine filings</li>
+          <li><svg aria-hidden="true"><use href="#i-x"/></svg>Separate vendors for legal, tax, HR and capital markets</li>
+          <li><svg aria-hidden="true"><use href="#i-x"/></svg>Limited advice beyond the form being filed</li>
+          <li><svg aria-hidden="true"><use href="#i-x"/></svg>Support through a general queue</li>
+        </ul>
+      </div>
+      <div class="col col-us">
+        <h3>With Muds Assets Distribution</h3>
+        <ul>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Registration, compliance, legal, HR and financial services in one firm</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Chartered Accountants, Company Secretaries and Advocates on one team</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Advice on structure first, filing second</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>A dedicated point of contact from start to finish</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DESKS -->
+<section class="sec" style="padding-top:0" aria-labelledby="desksTitle">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="desksTitle">Specialist desks most portals don't have.</h2>
+    </div>
+    <div class="desks">
+      <div class="desk"><h3><svg aria-hidden="true"><use href="#c-shr"/></svg>Physical shares recovery</h3><p>Tracing and recovering old physical share certificates, plus transmission and transposition.</p></div>
+      <div class="desk"><h3><svg aria-hidden="true"><use href="#c-tax"/></svg>IEPF claims</h3><p>Support with claims for shares and dividends transferred to the IEPF.</p></div>
+      <div class="desk"><h3><svg aria-hidden="true"><use href="#c-lic"/></svg>Merchant banking</h3><p>Support for fundraising and IPO preparation.</p></div>
+      <div class="desk"><h3><svg aria-hidden="true"><use href="#c-reg"/></svg>ESOP structuring</h3><p>Designing and documenting employee stock option plans.</p></div>
+      <div class="desk"><h3><svg aria-hidden="true"><use href="#c-comp"/></svg>NBFC services</h3><p>Registration and compliance for non-banking finance companies.</p></div>
+      <div class="desk"><h3><svg aria-hidden="true"><use href="#c-ipr"/></svg>DPDP compliance</h3><p>Getting ready for India's Digital Personal Data Protection Act.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- LEARN -->
+<section class="sec learn" aria-labelledby="learnTitle">
+  <div class="wrap learn-card">
+    <div>
+      <h2 id="learnTitle">Understand the Companies Act before you sign anything.</h2>
+      <p>Our YouTube channel explains the Companies Act, 2013 and everyday compliance in plain language, so you know what each filing is for.</p>
+      <a class="btn btn-ink" href="https://www.youtube.com/@ShwetaGuptaCompaniesAct2013/videos" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-yt"/></svg>Watch on YouTube</a>
+    </div>
+    <a class="player" href="https://www.youtube.com/@ShwetaGuptaCompaniesAct2013/videos" target="_blank" rel="noopener" aria-label="Open the Companies Act, 2013 video channel on YouTube">
+      <svg class="bg" viewBox="0 0 640 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <rect width="640" height="400" fill="#0E2240"/>
+        <g fill="none" stroke="#16325A" stroke-width="2">
+          <circle cx="520" cy="80" r="160"/><circle cx="520" cy="80" r="110"/><circle cx="520" cy="80" r="60"/>
+        </g>
+        <g fill="#16325A"><rect x="40" y="60" width="200" height="14" rx="7"/><rect x="40" y="88" width="140" height="14" rx="7"/><rect x="40" y="116" width="170" height="14" rx="7"/></g>
+        <text x="40" y="250" font-family="Bricolage Grotesque,sans-serif" font-weight="800" font-size="120" fill="#16325A">2013</text>
+      </svg>
+      <span class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6 4v16l14-8z"/></svg></span>
+      <span class="cap">Companies Act, 2013 explained<small>Video explainers on YouTube</small></span>
+    </a>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec faq" id="faq">
+  <div class="wrap faq-grid">
+    <div class="sec-head" style="margin-bottom:0">
+      <h2>Questions founders ask us first.</h2>
+      <p>Don't see yours? Ask on WhatsApp and an expert will answer.</p>
+    </div>
+    <div>
+      <details open><summary>Which business structure should I choose?<span class="pm"><svg aria-hidden="true"><use href="#i-plus"/></svg></span></summary><div class="ans">It depends on how many owners you have, whether you plan to raise funding, and how much personal liability you can take on. In a free consultation we compare Private Limited, LLP, One Person Company, partnership and proprietorship for your situation.</div></details>
+      <details><summary>What documents do I need to register a company?<span class="pm"><svg aria-hidden="true"><use href="#i-plus"/></svg></span></summary><div class="ans">Usually identity and address proof for each director and shareholder, and proof of the registered office address. We send you an exact checklist after the consultation, based on the structure you choose.</div></details>
+      <details><summary>How long does registration take?<span class="pm"><svg aria-hidden="true"><use href="#i-plus"/></svg></span></summary><div class="ans">It depends on name approval and government processing. Once your documents are verified, we share an estimated timeline and keep you updated at each stage.</div></details>
+      <details><summary>Do you handle compliance after registration?<span class="pm"><svg aria-hidden="true"><use href="#i-plus"/></svg></span></summary><div class="ans">Yes. We handle annual ROC filings, GST registration and returns, income tax, TDS and PF returns, bookkeeping and event-based filings such as share issues and director changes.</div></details>
+      <details><summary>Can you help recover old physical shares?<span class="pm"><svg aria-hidden="true"><use href="#i-plus"/></svg></span></summary><div class="ans">Yes. Our shares desk traces old holdings, handles transmission and transposition, and supports IEPF claims for unclaimed shares and dividends.</div></details>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="sec contact" id="contact">
+  <div class="wrap contact-grid">
+    <div>
+      <h2>Talk to an expert, free.</h2>
+      <p class="lead">Tell us what you need. We'll suggest the right structure, the documents to keep ready and a realistic timeline.</p>
+      <div class="channels">
+        <a class="channel" href="https://wa.me/917042621771" target="_blank" rel="noopener"><span>WhatsApp</span><b>+91 70426 21771</b></a>
+        <a class="channel" href="tel:+919599653306"><span>Call an expert</span><b>+91 95996 53306</b></a>
+        <a class="channel" href="tel:08069204610"><span>Customer care</span><b>0806 920 4610</b></a>
+        <a class="channel" href="mailto:info@muds.co.in"><span>Email</span><b>info@muds.co.in</b></a>
+        <a class="channel" style="grid-column:1/-1" href="https://www.google.com/maps/search/?api=1&amp;query=IDC-31b+Sector-16+MG+Road+Gurgaon+Haryana+122007" target="_blank" rel="noopener"><span>Visit our office</span><b>IDC-31b, Sector-16, Main MG Road, Gurgaon, Haryana 122007</b></a>
+      </div>
+    </div>
+    <form class="form" id="leadForm" novalidate>
+      <h3>Claim your free consultation</h3>
+      <p class="hint">This opens WhatsApp with your details filled in, ready to send.</p>
+      <div class="field"><label for="fName">Your name</label><input id="fName" type="text" autocomplete="name" required></div>
+      <div class="field"><label for="fPhone">Phone number</label><input id="fPhone" type="tel" autocomplete="tel" inputmode="tel" placeholder="+91" required></div>
+      <div class="field"><label for="fService">Service</label>
+        <select id="fService">
+          <option>Private Limited Company Registration</option><option>LLP Registration</option><option>One Person Company Registration</option><option>Partnership or Proprietorship</option><option>GST Registration and Returns</option><option>Trademark Registration</option><option>FSSAI, BIS or ISO</option><option>Annual Compliance</option><option>Physical Shares Recovery</option><option>Something else</option>
+        </select></div>
+      <div class="field"><label for="fMsg">Anything we should know? <span style="font-weight:400;color:var(--muted)">(optional)</span></label><textarea id="fMsg"></textarea></div>
+      <p class="err" id="fErr" role="alert"></p>
+      <button class="btn btn-wa" type="submit"><svg aria-hidden="true"><use href="#i-wa"/></svg>Send on WhatsApp</button>
+      <small>Prefer a call? Ring +91 95996 53306, Monday to Saturday, 10 AM to 7 PM.</small>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="logo" href="#top"><svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="none" stroke="#8C78F0" stroke-width="2.5"/><circle cx="20" cy="20" r="13" fill="#16325A"/><path d="M13.5 25V15l6.5 6 6.5-6v10" fill="none" stroke="#F29A1F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Muds<small>Assets Distribution</small></span></a>
+        <address>IDC-31b, Sector-16, Main MG Road<br>Gurgaon, Haryana 122007<br>
+          <a href="tel:+911141182222">Office: +91-11-41182222</a><br>
+          <a href="tel:+919599653306">Phone: +91 95996 53306</a><br>
+          <a href="mailto:info@muds.co.in">info@muds.co.in</a></address>
+        <div class="socials">
+          <a href="https://www.linkedin.com/company/muds-management-private-limited/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg aria-hidden="true"><use href="#i-in"/></svg></a>
+          <a href="https://www.facebook.com/mudsmanagement/" target="_blank" rel="noopener" aria-label="Facebook"><svg aria-hidden="true"><use href="#i-fb"/></svg></a>
+          <a href="https://x.com/mudsmanagement1" target="_blank" rel="noopener" aria-label="X"><svg aria-hidden="true"><use href="#i-xc"/></svg></a>
+          <a href="https://www.youtube.com/@ShwetaGuptaCompaniesAct2013/videos" target="_blank" rel="noopener" aria-label="YouTube"><svg aria-hidden="true"><use href="#i-yt"/></svg></a>
+        </div>
+      </div>
+      <div><h4>Register</h4><ul id="fl-reg"></ul></div>
+      <div><h4>Comply and file</h4><ul id="fl-comp"></ul></div>
+      <div><h4>Protect and license</h4><ul id="fl-ipr"></ul></div>
+    </div>
+    <div class="foot-bottom"><span>© Muds Assets Distribution. All rights reserved.</span><span>Monday to Saturday, 10 AM to 7 PM</span></div>
+  </div>
+</footer>
+
+<a class="fab" href="https://wa.me/917042621771" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg aria-hidden="true"><use href="#i-wa"/></svg><span>Chat with us</span></a>
+
+<script>
+(function(){
+  var WA = 'https://wa.me/917042621771?text=';
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function waLink(msg){ return WA + encodeURIComponent(msg); }
+
+  /* nav */
+  var nav = document.getElementById('nav');
+  window.addEventListener('scroll', function(){ nav.classList.toggle('scrolled', window.scrollY > 8); }, {passive:true});
+  var mb = document.getElementById('menuBtn'), mm = document.getElementById('mobileMenu');
+  mb.addEventListener('click', function(){
+    var open = mm.classList.toggle('open');
+    mb.setAttribute('aria-expanded', open); mb.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  });
+  mm.addEventListener('click', function(e){ if(e.target.tagName==='A'){ mm.classList.remove('open'); mb.setAttribute('aria-expanded','false'); } });
+
+  /* certificate */
+  var TYPES = {
+    pvt:{suffix:' Private Limited', label:'Private Limited Company'},
+    llp:{suffix:' LLP', label:'Limited Liability Partnership'},
+    opc:{suffix:' (OPC) Pvt Ltd', label:'One Person Company'},
+    sec8:{suffix:' Foundation', label:'Section 8 Company'}
+  };
+  var demo = [['Sharma Foods','pvt'],['Kavya Design','llp'],['Nexa Tech','opc'],['Asha Seva','sec8']];
+  var nameEl = document.getElementById('certName'), sufEl = document.getElementById('certSuffix'),
+      typeEl = document.getElementById('certType'), stamp = document.getElementById('stamp'),
+      wrap = document.getElementById('certWrap'), caret = document.getElementById('caret'),
+      input = document.getElementById('tryName'), chips = document.querySelectorAll('.chip');
+  var curType = 'pvt', userMode = false, demoTimer = null, typeTimer = null, stampTimer = null;
+
+  function fit(){
+    // shrink long names to fit the certificate line
+    var full = nameEl.textContent + sufEl.textContent;
+    var size = full.length > 30 ? 20 : full.length > 24 ? 24 : 30;
+    nameEl.parentNode.style.fontSize = size + 'px';
+  }
+  function setType(t){
+    curType = t; sufEl.textContent = TYPES[t].suffix; typeEl.textContent = TYPES[t].label;
+    chips.forEach(function(c){ c.setAttribute('aria-pressed', c.dataset.type === t); });
+    fit();
+  }
+  function hitStamp(){
+    stamp.classList.remove('hit'); wrap.classList.remove('shake');
+    void stamp.getBoundingClientRect();
+    stamp.classList.add('hit'); wrap.classList.add('shake');
+  }
+  function clearStamp(){ stamp.classList.remove('hit'); wrap.classList.remove('shake'); }
+  function typeOut(text, t, done){
+    clearTimeout(typeTimer); clearStamp(); setType(t);
+    if(reduce){ nameEl.textContent = text; fit(); hitStamp(); done && done(); return; }
+    var i = 0; nameEl.textContent = ''; caret.style.display = '';
+    (function step(){
+      nameEl.textContent = text.slice(0, i); fit();
+      if(i++ < text.length){ typeTimer = setTimeout(step, 70 + Math.random()*50); }
+      else { caret.style.display = 'none'; stampTimer = setTimeout(function(){ hitStamp(); done && done(); }, 260); }
+    })();
+  }
+  var di = 0;
+  function runDemo(){
+    if(userMode) return;
+    var d = demo[di % demo.length]; di++;
+    typeOut(d[0], d[1], function(){ demoTimer = setTimeout(runDemo, 2600); });
+  }
+  function startUser(){
+    userMode = true; clearTimeout(demoTimer); clearTimeout(typeTimer); clearTimeout(stampTimer);
+  }
+  input.addEventListener('input', function(){
+    startUser(); clearStamp(); caret.style.display = '';
+    var v = input.value.trim();
+    nameEl.textContent = v || 'Your Business'; fit();
+    clearTimeout(stampTimer);
+    if(v) stampTimer = setTimeout(function(){ caret.style.display='none'; hitStamp(); }, 700);
+  });
+  chips.forEach(function(c){ c.addEventListener('click', function(){
+    if(!userMode){ startUser(); nameEl.textContent = demo[(di-1+demo.length)%demo.length][0]; }
+    setType(c.dataset.type); caret.style.display='none'; hitStamp();
+  }); });
+  // start demo when visible
+  var started = false;
+  new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting && !started){ started = true; runDemo(); } }); }, {threshold:.3}).observe(wrap);
+
+  /* counters */
+  var counted = false;
+  var proof = document.querySelector('.proof');
+  new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if(!e.isIntersecting || counted) return; counted = true;
+      if(reduce) return;
+      document.querySelectorAll('[data-count]').forEach(function(el){
+        var to = parseFloat(el.dataset.count), dec = +(el.dataset.dec||0), suf = el.dataset.suffix||'', t0 = null;
+        function f(ts){ if(!t0) t0 = ts; var p = Math.min(1,(ts-t0)/1400), k = 1-Math.pow(1-p,3), v = to*k;
+          el.textContent = (dec ? v.toFixed(dec) : Math.round(v).toLocaleString('en-IN')) + suf;
+          if(p<1) requestAnimationFrame(f); }
+        requestAnimationFrame(f);
+      });
+    });
+  }, {threshold:.4}).observe(proof);
+
+  /* services */
+  var CATS = [
+    {id:'reg', name:'Register', title:'Register your business', blurb:'Choose the right structure and get registered, with drafting, filing and follow-up handled for you.', items:[
+      ['Private Limited Company','Limited liability company for startups and growing businesses.'],
+      ['LLP Registration','Flexible partnership structure with limited liability.'],
+      ['One Person Company','A company structure for a sole founder.'],
+      ['Partnership Firm','Partnership deed drafting and firm registration.'],
+      ['Sole Proprietorship','The quickest way to formalise a small business.'],
+      ['Section 8 Company and NGO','Non-profit company, trust and society registrations.']]},
+    {id:'comp', name:'Stay compliant', title:'Stay compliant every year', blurb:'Annual and event-based filings, bookkeeping and MCA changes, tracked so you never miss a due date.', items:[
+      ['Annual Compliance','ROC filings for Private Limited companies, LLPs and firms.'],
+      ['Bookkeeping and Accounting','Regular bookkeeping and accounting by qualified professionals.'],
+      ['MCA Services','Director changes, registered office, auditor appointment and more.'],
+      ['Event-based Compliance','Share issue, share transfer, increase in authorised capital.']]},
+    {id:'ipr', name:'Protect your brand', title:'Protect what you build', blurb:'Secure your brand name, creative work and inventions before someone else does.', items:[
+      ['Trademark Registration','Search, filing, objection reply and renewal.'],
+      ['Copyright Registration','Protect your creative and software works.'],
+      ['Patent and Design','Registration support for inventions and designs.']]},
+    {id:'tax', name:'Tax and returns', title:'File tax and returns on time', blurb:'GST, income tax, TDS and PF returns prepared and filed by our tax team.', items:[
+      ['GST Registration and Returns','Registration, monthly returns and annual return.'],
+      ['Income Tax Filing','ITR filing for individuals, firms and companies.'],
+      ['TDS and PF Returns','Periodic statutory return filing.']]},
+    {id:'lic', name:'Licences', title:'Get the licences you need', blurb:'Food, quality and MSME registrations so you can operate and sell without hold-ups.', items:[
+      ['FSSAI Registration','Basic, state and central food licences.'],
+      ['BIS and ISO','BIS registration and ISO certifications.'],
+      ['MSME and Trade Licence','MSME registration, shop and establishment, trade licence.']]},
+    {id:'shr', name:'Recover shares', title:'Recover old physical shares', blurb:'Trace forgotten holdings and get them transferred to the rightful owner.', items:[
+      ['Recovery of Physical Shares','Tracing and recovering physical share certificates and unclaimed holdings.'],
+      ['Transmission and Transposition','Documentation and liaison with companies and registrars.'],
+      ['IEPF Claims','Support with claims for shares and dividends held at the IEPF.']]}
+  ];
+  var tabs = document.getElementById('tabs'), panel = document.getElementById('panel');
+  function esc(s){ return s.replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+  CATS.forEach(function(c, i){
+    var b = document.createElement('button');
+    b.className = 'tab'; b.setAttribute('role','tab'); b.id = 'tab-' + c.id; b.setAttribute('aria-controls','panel');
+    b.innerHTML = '<span class="ico"><svg aria-hidden="true"><use href="#c-' + c.id + '"/></svg></span>' + esc(c.name) + '<span class="count">' + c.items.length + '</span>';
+    b.addEventListener('click', function(){ select(i, true); });
+    b.addEventListener('keydown', function(e){
+      var n = e.key === 'ArrowDown' || e.key === 'ArrowRight' ? 1 : e.key === 'ArrowUp' || e.key === 'ArrowLeft' ? -1 : 0;
+      if(n){ e.preventDefault(); select((i + n + CATS.length) % CATS.length, true, true); }
+    });
+    tabs.appendChild(b);
+  });
+  function select(i, user, focus){
+    var c = CATS[i];
+    tabs.querySelectorAll('.tab').forEach(function(t, j){ t.setAttribute('aria-selected', j===i); t.tabIndex = j===i ? 0 : -1; });
+    if(focus) tabs.children[i].focus();
+    if(user && window.innerWidth <= 1024) tabs.children[i].scrollIntoView({inline:'center', block:'nearest', behavior: reduce ? 'auto' : 'smooth'});
+    panel.setAttribute('aria-labelledby', 'tab-' + c.id);
+    panel.innerHTML = '<div class="panel-body"><div class="panel-top"><div><h3>' + esc(c.title) + '</h3><p>' + esc(c.blurb) + '</p></div>' +
+      '<svg class="panel-art" aria-hidden="true"><use href="#c-' + c.id + '"/></svg></div><div class="svc-list">' +
+      c.items.map(function(it){ return '<a class="svc" target="_blank" rel="noopener" href="' + waLink('Hello Muds, I would like to know more about ' + it[0] + '.') + '"><strong>' + esc(it[0]) + '</strong><span>' + esc(it[1]) + '</span><em>Ask about this on WhatsApp</em></a>'; }).join('') +
+      '</div></div>';
+  }
+  select(0);
+
+  /* footer service links */
+  [['fl-reg',0],['fl-comp',1],['fl-ipr',2]].forEach(function(p){
+    var ul = document.getElementById(p[0]);
+    var items = p[1]===2 ? CATS[2].items.concat(CATS[4].items.slice(0,1)) : p[1]===1 ? CATS[1].items.slice(0,2).concat(CATS[3].items.slice(0,2)) : CATS[0].items.slice(0,5);
+    ul.innerHTML = items.map(function(it){ return '<li><a target="_blank" rel="noopener" href="' + waLink('Hello Muds, I would like to know more about ' + it[0] + '.') + '">' + esc(it[0]) + '</a></li>'; }).join('');
+  });
+
+  /* process progress line */
+  var track = document.getElementById('track'), fill = document.getElementById('trackFill'), steps = document.querySelectorAll('.step');
+  function prog(){
+    var r = track.getBoundingClientRect(), vh = window.innerHeight;
+    var p = Math.max(0, Math.min(1, (vh*0.75 - r.top) / (r.height + vh*0.1)));
+    fill.style.width = (p*100) + '%';
+    steps.forEach(function(s, i){
+      var on = window.innerWidth > 1024 ? p >= i/ (steps.length-1) - 0.001 : s.getBoundingClientRect().top < vh*0.7;
+      s.classList.toggle('on', on);
+    });
+  }
+  window.addEventListener('scroll', prog, {passive:true}); window.addEventListener('resize', prog); prog();
+
+  /* lead form */
+  var form = document.getElementById('leadForm'), err = document.getElementById('fErr');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var n = document.getElementById('fName'), ph = document.getElementById('fPhone');
+    var name = n.value.trim(), phone = ph.value.trim();
+    if(!name){ err.textContent = 'Enter your name so our team knows who to reply to.'; n.focus(); return; }
+    if(phone.replace(/\D/g,'').length < 10){ err.textContent = 'Enter a phone number with at least 10 digits.'; ph.focus(); return; }
+    err.textContent = '';
+    var msg = 'Hello Muds, I would like a free consultation.\nName: ' + name + '\nPhone: ' + phone + '\nService: ' + document.getElementById('fService').value;
+    var extra = document.getElementById('fMsg').value.trim(); if(extra) msg += '\nDetails: ' + extra;
+    window.open(waLink(msg), '_blank', 'noopener');
+  });
+})();
+</script>
+</body>
+</html>
